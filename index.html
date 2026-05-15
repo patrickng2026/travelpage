@@ -467,11 +467,12 @@
       <button class="btn btn-navy btn-sm" onclick="checkWeather()">Check Weather</button>
     </div>
     <div class="api-notice" id="weatherNotice">
-      <strong>🔑 API Key Required</strong>
-      This widget uses the free OpenWeather API. To enable live weather:<br>
-      1. Get a free key at <strong>openweathermap.org/api</strong><br>
-      2. Open <code>index.html</code> in a text editor<br>
-      3. Find <code>OPENWEATHER_API_KEY</code> in the script and replace <code>"YOUR_API_KEY_HERE"</code> with your key.
+      <strong>🔑 Enter your OpenWeather API Key to enable live weather</strong>
+      Get a free key at <strong>openweathermap.org/api</strong> — then paste it below. It is saved only in your browser.
+      <div style="display:flex;gap:0.75rem;margin-top:0.75rem;flex-wrap:wrap">
+        <input type="text" id="apiKeyInput" placeholder="Paste your API key here..." style="flex:1;padding:0.6rem 0.9rem;border:1px solid #f59e0b;border-radius:6px;font-family:Inter,sans-serif;font-size:0.88rem;min-width:0">
+        <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;white-space:nowrap">Save Key</button>
+      </div>
     </div>
     <div class="weather-card" id="weatherCard">
       <div class="wc-city" id="wc-city"></div>
@@ -1020,22 +1021,17 @@ function clearItinerary() {
 }
 
 // ═══════════════════ WEATHER ═══════════════════
-const OPENWEATHER_API_KEY = "YOUR_API_KEY_HERE";
+const OPENWEATHER_API_KEY = localStorage.getItem('owApiKey') || '';
 // Get a free API key at https://openweathermap.org/api
 // Replace "YOUR_API_KEY_HERE" with your key, then the widget will show live weather.
 
 function checkWeather() {
   const city = document.getElementById('weather-input').value.trim();
   if (!city) return;
-  if (OPENWEATHER_API_KEY === "YOUR_API_KEY_HERE") {
-    document.getElementById('weatherNotice').style.display = 'block';
-    document.getElementById('weatherCard').classList.remove('show');
-    return;
-  }
+  const key = localStorage.getItem('owApiKey') || '';
+  if (!key) { document.getElementById('weatherNotice').style.display = 'block'; return; }
   document.getElementById('weatherNotice').style.display = 'none';
-  // Uncomment the block below once you have added your API key:
-  /*
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${OPENWEATHER_API_KEY}&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${key}&units=metric`)
     .then(r => r.json())
     .then(data => {
       if (data.cod !== 200) { alert('City not found. Try a different spelling.'); return; }
@@ -1048,7 +1044,14 @@ function checkWeather() {
       document.getElementById('weatherCard').classList.add('show');
     })
     .catch(() => alert('Could not fetch weather. Check your API key and connection.'));
-  */
+}
+
+function saveApiKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) return;
+  localStorage.setItem('owApiKey', key);
+  document.getElementById('weatherNotice').style.display = 'none';
+  document.getElementById('apiKeyInput').value = '';
 }
 
 // ═══════════════════ CURRENCY ═══════════════════
@@ -1127,6 +1130,7 @@ renderChecklist();
 renderItinerary();
 renderCurrencyGrid();
 renderSafety();
+if (localStorage.getItem('owApiKey')) document.getElementById('weatherNotice').style.display = 'none';
 </script>
 </body>
 </html>
