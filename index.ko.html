@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Explorer — We went, so you know where to go.</title>
+  <title>트래블 익스플로러 — 우리가 다녀왔습니다, 당신이 가야 할 곳을 알려드립니다.</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -275,16 +275,16 @@
 <nav>
   <a class="nav-brand" href="#home">Travel <span>Explorer</span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#guides">Guides</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#weather">Weather</a></li>
-    <li><a href="#currency">Currency</a></li>
-    <li><a href="#safety">Safety</a></li>
-    <li><a href="#enquiry-form-section">Enquiry</a></li>
+    <li><a href="#home">홈</a></li>
+    <li><a href="#guides">가이드</a></li>
+    <li><a href="#tools">도구</a></li>
+    <li><a href="#weather">날씨</a></li>
+    <li><a href="#currency">환율</a></li>
+    <li><a href="#safety">안전</a></li>
+    <li><a href="#enquiry-form-section">문의</a></li>
   </ul>
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn">🌐 EN ▾</button>
+    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn">🌐 KO ▾</button>
     <div class="lang-menu" id="langMenu">
       <a href="index.html">🇸🇬 English</a>
       <a href="index.zh.html">🇨🇳 中文 (简体)</a>
@@ -302,12 +302,12 @@
   <div class="hero-overlay"></div>
   <div class="hero-grain"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">❀ &nbsp; Travel Explorer — Asia &amp; Beyond &nbsp; ❀</div>
-    <h1 class="hero-title">We went, so you know<br>where to go.</h1>
-    <p class="hero-desc">Curated travel guides with real prices, realistic itineraries, airport tips, safety notes, weather insights, and local recommendations.</p>
+    <div class="hero-eyebrow">❀ &nbsp; 트래블 익스플로러 — 아시아 그리고 그 너머 &nbsp; ❀</div>
+    <h1 class="hero-title">우리가 먼저 다녀왔습니다,<br>어디로 가야 할지 알려드리겠습니다.</h1>
+    <p class="hero-desc">실제 가격, 현실적인 일정, 공항 팁, 안전 정보, 날씨 분석, 현지 추천을 담은 엄선된 여행 가이드입니다.</p>
     <div class="hero-ctas">
-      <a href="#guides" class="btn btn-gold">Read Latest Guide</a>
-      <a href="#enquiry-form-section" class="btn btn-outline-white">Send Enquiry</a>
+      <a href="#guides" class="btn btn-gold">최신 가이드 보기</a>
+      <a href="#enquiry-form-section" class="btn btn-outline-white">문의하기</a>
     </div>
   </div>
   <div class="hero-sakura">❀ ❀ ❀ ❀ ❀</div>
@@ -316,39 +316,39 @@
 <!-- ═══════════════════ ENQUIRY FORM ═══════════════════ -->
 <section id="enquiry-form-section">
   <div class="inner">
-    <div class="section-label">Get In Touch</div>
-    <h2 class="section-title">Plan Your Next Adventure</h2>
-    <p class="section-sub">Tell us where you'd like to go and we'll send curated recommendations straight to your inbox.</p>
+    <div class="section-label">문의하기</div>
+    <h2 class="section-title">다음 여행을 계획해 보세요</h2>
+    <p class="section-sub">원하시는 여행지를 알려주시면 맞춤 추천 정보를 이메일로 보내드리겠습니다.</p>
     <div class="form-card">
       <div class="success-msg" id="successMsg">
         <div style="font-size:2rem;margin-bottom:0.5rem">✅</div>
-        <strong style="font-size:1.1rem">Enquiry Received!</strong><br>
-        Thank you — we'll be in touch within 24 hours.
+        <strong style="font-size:1.1rem">문의가 접수되었습니다!</strong><br>
+        감사합니다 — 24시간 이내에 연락드리겠습니다.
       </div>
       <div id="formError" style="display:none;background:#fff5f5;border:1px solid #fc8181;border-radius:6px;padding:1rem 1.4rem;margin-bottom:1.2rem;color:#c53030;font-size:0.9rem">
-        ⚠ Something went wrong sending your enquiry. Please try again or email us directly.
+        ⚠ 문의 전송 중 오류가 발생했습니다. 다시 시도하시거나 이메일로 직접 연락해 주십시오.
       </div>
       <form id="enquiryForm" novalidate>
         <div class="enquiry-grid">
           <div class="fg" id="fg-name">
-            <label for="fname">Full Name *</label>
-            <input type="text" id="fname" placeholder="Jane Smith">
-            <span class="errmsg">Please enter your full name.</span>
+            <label for="fname">성명 *</label>
+            <input type="text" id="fname" placeholder="홍길동">
+            <span class="errmsg">성명을 입력해 주십시오.</span>
           </div>
           <div class="fg" id="fg-email">
-            <label for="femail">Email Address *</label>
-            <input type="email" id="femail" placeholder="jane@example.com">
-            <span class="errmsg">Please enter a valid email.</span>
+            <label for="femail">이메일 주소 *</label>
+            <input type="email" id="femail" placeholder="hong@example.com">
+            <span class="errmsg">유효한 이메일 주소를 입력해 주십시오.</span>
           </div>
           <div class="fg" id="fg-phone">
-            <label for="fphone">Phone Number</label>
+            <label for="fphone">전화번호</label>
             <input type="tel" id="fphone" placeholder="+65 9123 4567">
             <span class="errmsg"></span>
           </div>
           <div class="fg" id="fg-dest">
-            <label for="fdest">Destination of Interest *</label>
+            <label for="fdest">관심 여행지 *</label>
             <select id="fdest">
-              <option value="">— Select Destination —</option>
+              <option value="">— 여행지를 선택하세요 —</option>
               <option>Seoul, South Korea</option>
               <option>Singapore</option>
               <option>Bali, Indonesia</option>
@@ -363,25 +363,25 @@
               <option>Hanoi, Vietnam</option>
               <option>Multiple / Undecided</option>
             </select>
-            <span class="errmsg">Please select a destination.</span>
+            <span class="errmsg">여행지를 선택해 주십시오.</span>
           </div>
           <div class="fg" id="fg-date">
-            <label for="fdate">Travel Date *</label>
+            <label for="fdate">여행 날짜 *</label>
             <input type="date" id="fdate">
-            <span class="errmsg">Please select a travel date.</span>
+            <span class="errmsg">여행 날짜를 선택해 주십시오.</span>
           </div>
           <div class="fg" id="fg-pax">
-            <label for="fpax">Number of Travellers *</label>
+            <label for="fpax">여행 인원 *</label>
             <input type="number" id="fpax" min="1" max="50" placeholder="2">
-            <span class="errmsg">Please enter number of travellers.</span>
+            <span class="errmsg">여행 인원을 입력해 주십시오.</span>
           </div>
           <div class="fg full" id="fg-msg">
-            <label for="fmsg">Message</label>
-            <textarea id="fmsg" rows="4" placeholder="Tell us about your trip preferences, budget range, or any special requirements..."></textarea>
+            <label for="fmsg">메시지</label>
+            <textarea id="fmsg" rows="4" placeholder="여행 선호 사항, 예산 범위, 특별 요청 사항 등을 알려주십시오..."></textarea>
             <span class="errmsg"></span>
           </div>
           <div class="fg full">
-            <button type="submit" class="btn btn-gold" style="width:fit-content;min-width:180px">Submit Enquiry</button>
+            <button type="submit" class="btn btn-gold" style="width:fit-content;min-width:180px">문의 제출</button>
           </div>
         </div>
       </form>
@@ -392,10 +392,10 @@
 <!-- ═══════════════════ CITY GUIDES ═══════════════════ -->
 <section id="guides" class="section">
   <div class="inner">
-    <div class="section-label">Destination Guides</div>
-    <h2 class="section-title">Explore Our Cities</h2>
+    <div class="section-label">여행지 가이드</div>
+    <h2 class="section-title">도시를 탐험하세요</h2>
     <span class="section-divider">❀ ❀ ❀</span>
-    <p class="section-sub">Twelve hand-picked destinations across Asia and beyond — real budgets, real advice.</p>
+    <p class="section-sub">아시아와 그 너머에서 엄선한 12개 여행지 — 실제 예산, 솔직한 조언.</p>
     <div class="cards-grid reveal" id="cardsGrid"></div>
   </div>
 </section>
@@ -407,14 +407,14 @@
 <!-- ═══════════════════ TRAVEL TOOLS ═══════════════════ -->
 <section id="tools" class="section section-alt">
   <div class="inner">
-    <div class="section-label">Travel Tools</div>
-    <h2 class="section-title">Plan Smarter</h2>
+    <div class="section-label">여행 도구</div>
+    <h2 class="section-title">스마트하게 계획하세요</h2>
     <span class="section-divider">❀ ❀ ❀</span>
-    <p class="section-sub">Interactive tools to budget, pack, and plan your perfect trip.</p>
+    <p class="section-sub">예산 계산, 짐 싸기, 일정 계획을 위한 인터랙티브 도구입니다.</p>
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('budget',this)">Budget Calculator</button>
-      <button class="tab-btn" onclick="switchTab('pack',this)">Packing Checklist</button>
-      <button class="tab-btn" onclick="switchTab('itinerary',this)">Itinerary Planner</button>
+      <button class="tab-btn active" onclick="switchTab('budget',this)">예산 계산기</button>
+      <button class="tab-btn" onclick="switchTab('pack',this)">짐 체크리스트</button>
+      <button class="tab-btn" onclick="switchTab('itinerary',this)">일정 플래너</button>
     </div>
 
     <!-- Budget Calculator -->
@@ -422,7 +422,7 @@
       <div class="tool-card">
         <div class="tf">
           <div class="fg">
-            <label>Destination</label>
+            <label>여행지</label>
             <select id="bc-dest" onchange="updateDefaultBudget()">
               <option value="120">Seoul, South Korea</option>
               <option value="125">Singapore</option>
@@ -439,23 +439,23 @@
             </select>
           </div>
           <div class="fg">
-            <label>No. of Travellers</label>
+            <label>여행 인원</label>
             <input type="number" id="bc-pax" value="2" min="1" max="50">
           </div>
           <div class="fg">
-            <label>No. of Days</label>
+            <label>여행 일수</label>
             <input type="number" id="bc-days" value="5" min="1" max="90">
           </div>
           <div class="fg">
-            <label>Daily Budget per Person (SGD)</label>
+            <label>1인 1일 예산 (SGD)</label>
             <input type="number" id="bc-daily" value="120" min="1">
           </div>
           <div class="fg full">
-            <button class="btn btn-navy btn-sm" onclick="calcBudget()">Calculate Total</button>
+            <button class="btn btn-navy btn-sm" onclick="calcBudget()">총 비용 계산</button>
           </div>
         </div>
         <div class="result-box" id="bc-result" style="display:none">
-          <div class="rl">Estimated Total Trip Cost</div>
+          <div class="rl">예상 총 여행 경비</div>
           <div class="rv" id="bc-value">SGD 0</div>
           <div style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem" id="bc-breakdown"></div>
         </div>
@@ -466,8 +466,8 @@
     <div class="tab-panel" id="tab-pack">
       <div class="tool-card">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
-          <p style="color:var(--muted);font-size:0.88rem">Tick items as you pack — your progress is saved automatically.</p>
-          <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.5rem 1rem;border-radius:4px" onclick="resetChecklist()">Reset All</button>
+          <p style="color:var(--muted);font-size:0.88rem">짐을 싸면서 항목을 체크하세요 — 진행 상황이 자동으로 저장됩니다.</p>
+          <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.5rem 1rem;border-radius:4px" onclick="resetChecklist()">전체 초기화</button>
         </div>
         <div class="checklist-grid" id="checklistGrid"></div>
       </div>
@@ -478,24 +478,24 @@
       <div class="tool-card">
         <div class="tf">
           <div class="fg">
-            <label>Day</label>
+            <label>날짜 (일차)</label>
             <input type="number" id="it-day" placeholder="1" min="1" max="90">
           </div>
           <div class="fg">
-            <label>Time</label>
+            <label>시간</label>
             <input type="time" id="it-time">
           </div>
           <div class="fg">
-            <label>Activity</label>
-            <input type="text" id="it-activity" placeholder="Visit Gyeongbokgung Palace">
+            <label>활동</label>
+            <input type="text" id="it-activity" placeholder="경복궁 방문">
           </div>
           <div class="fg">
-            <label>Notes</label>
-            <input type="text" id="it-notes" placeholder="Bring passport for discounts">
+            <label>메모</label>
+            <input type="text" id="it-notes" placeholder="여권 지참 시 할인 가능">
           </div>
           <div class="fg full" style="display:flex;gap:0.75rem;flex-wrap:wrap">
-            <button class="btn btn-navy btn-sm" onclick="addItinerary()">Add to Itinerary</button>
-            <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.6rem 1.2rem;border-radius:4px" onclick="clearItinerary()">Clear All</button>
+            <button class="btn btn-navy btn-sm" onclick="addItinerary()">일정에 추가</button>
+            <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.6rem 1.2rem;border-radius:4px" onclick="clearItinerary()">전체 삭제</button>
           </div>
         </div>
         <div id="it-output"></div>
@@ -507,19 +507,19 @@
 <!-- ═══════════════════ WEATHER ═══════════════════ -->
 <section id="weather" class="section">
   <div class="inner">
-    <div class="section-label">Live Weather</div>
-    <h2 class="section-title">Check Destination Weather</h2>
-    <p class="section-sub">Enter a city to get current weather conditions before you travel.</p>
+    <div class="section-label">실시간 날씨</div>
+    <h2 class="section-title">여행지 날씨 확인</h2>
+    <p class="section-sub">도시 이름을 입력하시면 출발 전 현재 날씨를 확인하실 수 있습니다.</p>
     <div class="weather-row">
-      <input type="text" id="weather-input" placeholder="e.g. Tokyo, Bangkok, Seoul..." onkeydown="if(event.key==='Enter')checkWeather()">
-      <button class="btn btn-navy btn-sm" onclick="checkWeather()">Check Weather</button>
+      <input type="text" id="weather-input" placeholder="예: Tokyo, Bangkok, Seoul..." onkeydown="if(event.key==='Enter')checkWeather()">
+      <button class="btn btn-navy btn-sm" onclick="checkWeather()">날씨 확인</button>
     </div>
     <div class="api-notice" id="weatherNotice">
-      <strong>🔑 Enter your OpenWeather API Key to enable live weather</strong>
-      Get a free key at <strong>openweathermap.org/api</strong> — then paste it below. It is saved only in your browser.
+      <strong>🔑 실시간 날씨를 활성화하려면 OpenWeather API 키를 입력하세요</strong>
+      <strong>openweathermap.org/api</strong>에서 무료 키를 발급받아 아래에 붙여넣으세요. 키는 브라우저에만 저장됩니다.
       <div style="display:flex;gap:0.75rem;margin-top:0.75rem;flex-wrap:wrap">
-        <input type="text" id="apiKeyInput" placeholder="Paste your API key here..." style="flex:1;padding:0.6rem 0.9rem;border:1px solid #f59e0b;border-radius:6px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.88rem;min-width:0">
-        <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;white-space:nowrap">Save Key</button>
+        <input type="text" id="apiKeyInput" placeholder="API 키를 여기에 붙여넣으세요..." style="flex:1;padding:0.6rem 0.9rem;border:1px solid #f59e0b;border-radius:6px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.88rem;min-width:0">
+        <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;white-space:nowrap">키 저장</button>
       </div>
     </div>
     <div id="wc-error" style="display:none;background:#fff5f5;border:1px solid #fc8181;border-radius:8px;padding:0.9rem 1.2rem;max-width:480px;font-size:0.88rem;color:#c53030;margin-bottom:1rem"></div>
@@ -528,9 +528,9 @@
       <div class="wc-temp" id="wc-temp"></div>
       <div class="wc-cond" id="wc-cond"></div>
       <div class="wc-details">
-        <span>💧 Humidity: <strong id="wc-hum"></strong></span>
-        <span>💨 Wind: <strong id="wc-wind"></strong></span>
-        <span>👁 Visibility: <strong id="wc-vis"></strong></span>
+        <span>💧 습도: <strong id="wc-hum"></strong></span>
+        <span>💨 풍속: <strong id="wc-wind"></strong></span>
+        <span>👁 가시거리: <strong id="wc-vis"></strong></span>
       </div>
     </div>
   </div>
@@ -539,24 +539,24 @@
 <!-- ═══════════════════ CURRENCY ═══════════════════ -->
 <section id="currency" class="section section-alt">
   <div class="inner">
-    <div class="section-label">Currency Converter</div>
-    <h2 class="section-title">SGD Exchange Rates</h2>
-    <p class="section-sub">Instant conversion from Singapore Dollars to major travel currencies.</p>
+    <div class="section-label">환율 계산기</div>
+    <h2 class="section-title">SGD 환율</h2>
+    <p class="section-sub">싱가포르 달러에서 주요 여행 통화로 즉시 환산합니다.</p>
     <div class="cur-input-row">
       <span class="cur-base-label">SGD</span>
       <input type="number" id="sgd-input" value="100" min="0" oninput="convertCurrency()">
     </div>
     <div class="cur-grid" id="curGrid"></div>
-    <p class="cur-disclaimer">Rates are approximate and for reference only. Last updated May 2026. Always confirm with your bank before travelling.</p>
+    <p class="cur-disclaimer">환율은 참고용 근사치입니다. 2026년 5월 최종 업데이트. 출발 전 반드시 거래 은행에서 최신 환율을 확인하십시오.</p>
   </div>
 </section>
 
 <!-- ═══════════════════ SAFETY ═══════════════════ -->
 <section id="safety" class="section">
   <div class="inner">
-    <div class="section-label">Safety Notes</div>
-    <h2 class="section-title">Travel Safe</h2>
-    <p class="section-sub">Per-destination safety ratings, tips, scam alerts, and emergency contacts.</p>
+    <div class="section-label">안전 정보</div>
+    <h2 class="section-title">안전한 여행</h2>
+    <p class="section-sub">여행지별 안전 등급, 팁, 사기 경보, 긴급 연락처를 안내합니다.</p>
     <div id="safetyAccordion"></div>
   </div>
 </section>
@@ -566,31 +566,31 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Travel <span>Explorer</span></div>
-      <div class="footer-tagline">We went, so you know where to go.</div>
-      <p class="footer-disc">Travel Explorer is an independent travel content platform. All guides are curated from first-hand experience and verified sources. For informational purposes only. Always verify current travel advisories with your country's official government travel portal before departing.</p>
+      <div class="footer-tagline">우리가 다녀왔습니다, 어디로 가야 할지 알려드립니다.</div>
+      <p class="footer-disc">Travel Explorer는 독립 여행 콘텐츠 플랫폼입니다. 모든 가이드는 직접 경험과 검증된 자료를 바탕으로 제작되었으며 참고 목적으로만 제공됩니다. 출발 전 반드시 정부 공식 여행 포털에서 최신 여행 경보를 확인하십시오.</p>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h4>탐색</h4>
       <ul>
-        <li><a href="#guides">City Guides</a></li>
-        <li><a href="#tools">Travel Tools</a></li>
-        <li><a href="#weather">Weather</a></li>
-        <li><a href="#currency">Currency</a></li>
-        <li><a href="#safety">Safety Notes</a></li>
+        <li><a href="#guides">도시 가이드</a></li>
+        <li><a href="#tools">여행 도구</a></li>
+        <li><a href="#weather">날씨</a></li>
+        <li><a href="#currency">환율</a></li>
+        <li><a href="#safety">안전 정보</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Destinations</h4>
+      <h4>여행지</h4>
       <ul>
-        <li><a href="#guides">Seoul</a></li>
-        <li><a href="#guides">Tokyo</a></li>
-        <li><a href="#guides">Bali</a></li>
-        <li><a href="#guides">Bangkok</a></li>
-        <li><a href="#guides">Maldives</a></li>
+        <li><a href="#guides">서울</a></li>
+        <li><a href="#guides">도쿄</a></li>
+        <li><a href="#guides">발리</a></li>
+        <li><a href="#guides">방콕</a></li>
+        <li><a href="#guides">몰디브</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Travel Explorer. All rights reserved.</div>
+  <div class="footer-bottom">© 2026 Travel Explorer. 모든 권리 보유.</div>
 </footer>
 
 <script>
@@ -600,241 +600,241 @@ const cities = [
     id:'seoul', name:'Seoul', country:'South Korea', flight:'~6.5h', budget:'SGD $120–180/day',
     budgetDefault:150, season:'Mar–May, Sep–Nov', risk:'low',
     img:'https://images.unsplash.com/photo-1549180030-48bf079fb38a?w=800&q=80',
-    desc:'Ancient palaces, K-pop culture, world-class street food, and neon-lit nightscapes.',
-    overview:'Seoul is a city of extraordinary contrasts — royal palaces sit beside glass skyscrapers, traditional tea houses open onto buzzing neon-lit streets. From Gangnam glamour to Hongdae indie culture, every neighbourhood tells a different story.',
+    desc:'고궁, K-팝 문화, 세계적인 길거리 음식, 그리고 네온 빛 야경이 어우러진 도시.',
+    overview:'서울은 극적인 대비의 도시입니다 — 왕조의 궁궐이 유리 마천루 옆에 자리하고, 전통 찻집은 활기찬 네온 거리와 맞닿아 있습니다. 강남의 화려함부터 홍대의 인디 문화까지, 모든 동네가 저마다의 이야기를 품고 있습니다.',
     itinerary:[
-      {day:'Day 1', items:['Gyeongbokgung Palace &amp; National Folk Museum','Bukchon Hanok Village','Insadong street food &amp; craft galleries','Namsan Tower sunset views']},
-      {day:'Day 2', items:['COEX Starfield Library &amp; Aquarium','Gangnam district &amp; K-Star Road','Apgujeong Rodeo Street for dinner','Explore Cheongdam-dong luxury stores']},
-      {day:'Day 3', items:['Hongdae flea market &amp; street performances','DMZ guided tour (half-day)','Myeongdong street food &amp; skincare haul','Dongdaemun Design Plaza (DDP) night views']}
+      {day:'1일차', items:['경복궁 &amp; 국립민속박물관','북촌 한옥마을','인사동 길거리 음식 &amp; 공예 갤러리','남산타워 일몰 감상']},
+      {day:'2일차', items:['COEX 스타필드 도서관 &amp; 아쿠아리움','강남 지역 &amp; K-Star Road','압구정 로데오 거리 저녁 식사','청담동 명품 거리 탐방']},
+      {day:'3일차', items:['홍대 벼룩시장 &amp; 버스킹','DMZ 가이드 투어 (반일)','명동 길거리 음식 &amp; 뷰티 쇼핑','동대문 디자인 플라자 (DDP) 야경']}
     ],
-    food:['Samgyeopsal (grilled pork belly BBQ)','Bibimbap at Gwangjang Market','Tteokbokki spicy rice cakes','Bingsu shaved ice dessert','Makgeolli rice wine at a pojangmacha'],
-    transport:'T-money card covers all buses and metro. AREX Airport Rail to City Hall: 43 min (~SGD 9). Kakao Taxi app is reliable and metered.',
-    costs:[['Budget guesthouse','SGD 50–80/night'],['Mid-range hotel','SGD 100–160/night'],['Local meals','SGD 8–15/meal'],['Metro/bus','SGD 3–5/day'],['Attractions','SGD 5–15/entry']],
-    safetyTips:['Seoul is among the world\'s safest cities — violent crime is extremely rare','Watch for pickpockets in Myeongdong and Namdaemun markets','Buying counterfeit goods is illegal and can result in fines for tourists'],
-    photos:['Namsan Tower at night','Bukchon Hanok Village at dawn','Han River Park during cherry blossom season'],
-    scams:'Tourist taxi overcharging in unmarked cabs. Always use Kakao Taxi or confirm the meter is running.',
-    emergency:'112 (Police) | 119 (Fire / Ambulance)',
-    hospital:'Seoul National University Hospital | Severance Hospital (international clinic)'
+    food:['삼겹살 (돼지 삼겹살 바비큐)','광장시장 비빔밥','떡볶이','빙수','포장마차 막걸리'],
+    transport:'T-money 카드로 모든 버스와 지하철 이용 가능. AREX 공항철도 시청역까지: 43분 (약 SGD 9). Kakao Taxi 앱은 신뢰할 수 있으며 미터제로 운행됩니다.',
+    costs:[['저렴한 게스트하우스','SGD 50–80/박'],['중급 호텔','SGD 100–160/박'],['현지 식사','SGD 8–15/끼'],['지하철/버스','SGD 3–5/일'],['관광지 입장료','SGD 5–15/회']],
+    safetyTips:['서울은 세계에서 가장 안전한 도시 중 하나로 강력 범죄가 극히 드뭅니다','명동과 남대문 시장에서는 소매치기를 주의하십시오','위조품 구매는 불법이며 관광객도 벌금을 부과받을 수 있습니다'],
+    photos:['야경의 남산타워','새벽녘의 북촌 한옥마을','벚꽃 시즌의 한강공원'],
+    scams:'무표시 택시의 바가지 요금 주의. 항상 Kakao Taxi를 이용하거나 미터기 작동 여부를 확인하십시오.',
+    emergency:'112 (경찰) | 119 (소방/구급)',
+    hospital:'서울대학교병원 | 세브란스병원 (국제 클리닉)'
   },
   {
     id:'singapore', name:'Singapore', country:'Singapore', flight:'— (Base City)', budget:'SGD $100–150/day',
     budgetDefault:125, season:'Year-round', risk:'low',
     img:'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80',
-    desc:'A gleaming city-state where futuristic gardens, hawker centres, and heritage streets coexist.',
-    overview:'Singapore packs extraordinary diversity into a tiny island: colonial heritage at Raffles Hotel, futuristic gardens at Gardens by the Bay, and the world\'s most celebrated hawker food scene — all connected by an immaculate metro system.',
+    desc:'미래형 정원, 호커 센터, 유산 거리가 공존하는 빛나는 도시 국가.',
+    overview:'싱가포르는 작은 섬에 놀라운 다양성을 담아냈습니다. 래플스 호텔의 식민지 유산, 가든스 바이 더 베이의 미래적 정원, 세계적으로 유명한 호커 음식 문화 — 이 모든 것이 완벽한 지하철 시스템으로 연결되어 있습니다.',
     itinerary:[
-      {day:'Day 1', items:['Marina Bay Sands SkyPark','Gardens by the Bay (Supertree Grove)','Merlion Park &amp; Esplanade','Clarke Quay evening riverfront']},
-      {day:'Day 2', items:['Chinatown Heritage Centre','Maxwell Food Centre for hawker lunch','Little India &amp; Tekka Market','Haji Lane for boutique shopping &amp; street art']},
-      {day:'Day 3', items:['Sentosa Island &amp; Universal Studios','S.E.A. Aquarium','Orchard Road shopping','Night Safari at Singapore Zoo']}
+      {day:'1일차', items:['마리나 베이 샌즈 스카이파크','가든스 바이 더 베이 (슈퍼트리 그로브)','머라이언 파크 &amp; 에스플러네이드','클라크 키 저녁 강변 풍경']},
+      {day:'2일차', items:['차이나타운 헤리티지 센터','맥스웰 푸드 센터 호커 점심','리틀 인디아 &amp; 테카 마켓','하지 레인 부티크 쇼핑 &amp; 스트리트 아트']},
+      {day:'3일차', items:['센토사 섬 &amp; 유니버설 스튜디오','S.E.A. 아쿠아리움','오차드 로드 쇼핑','싱가포르 동물원 나이트 사파리']}
     ],
-    food:['Hainanese Chicken Rice at Tian Tian Hawker','Chilli Crab at No Signboard Seafood','Laksa at 328 Katong','Satay at Lau Pa Sat','Durian from Geylang hawkers'],
-    transport:'EZ-Link card on all MRT and buses. Grab app for taxis. CBD is very walkable. MRT from Changi Airport to City: ~30 min (SGD 2.40).',
-    costs:[['Budget hostel','SGD 35–60/night'],['Mid-range hotel','SGD 150–250/night'],['Hawker meals','SGD 4–8/meal'],['MRT daily','SGD 3–6/day'],['Attractions','SGD 0–40/entry']],
-    safetyTips:['Singapore is one of the safest cities globally — extremely low crime','Strict laws: no chewing gum, no jaywalking (SGD 500 fine), no littering','Always carry ID; random checks do occur'],
-    photos:['Marina Bay Sands reflection at night','Supertree Grove light show','Haji Lane murals &amp; colourful shophouses'],
-    scams:'Very rare. Avoid unofficial money changers offering above-market rates.',
-    emergency:'999 (Police) | 995 (Ambulance)',
-    hospital:'Singapore General Hospital | Raffles Hospital (private, international)'
+    food:['티안 티안 호커의 하이난 치킨 라이스','No Signboard Seafood의 칠리 크랩','328 카통 락사','라우 파 삿 사테이','겔랑 호커의 두리안'],
+    transport:'EZ-Link 카드로 모든 MRT 및 버스 이용. 택시는 Grab 앱 이용. CBD는 도보 이동이 편리합니다. 창이 공항에서 시내까지 MRT: 약 30분 (SGD 2.40).',
+    costs:[['저렴한 호스텔','SGD 35–60/박'],['중급 호텔','SGD 150–250/박'],['호커 식사','SGD 4–8/끼'],['MRT 일일','SGD 3–6/일'],['관광지 입장료','SGD 0–40/회']],
+    safetyTips:['싱가포르는 세계에서 가장 안전한 도시 중 하나로 범죄율이 매우 낮습니다','엄격한 법률: 껌 반입 금지, 무단횡단 금지 (SGD 500 벌금), 쓰레기 투기 금지','항상 신분증을 지참하십시오. 무작위 검사가 실시되기도 합니다'],
+    photos:['야간 마리나 베이 샌즈 반영','슈퍼트리 그로브 라이트쇼','하지 레인 벽화 &amp; 컬러풀한 숍하우스'],
+    scams:'매우 드뭅니다. 시장 환율을 초과하는 비공식 환전상은 피하십시오.',
+    emergency:'999 (경찰) | 995 (구급)',
+    hospital:'싱가포르 종합병원 | 래플스 병원 (사립 국제)'
   },
   {
     id:'bali', name:'Bali', country:'Indonesia', flight:'~2.5h', budget:'SGD $60–100/day',
     budgetDefault:80, season:'Apr–Oct', risk:'low',
     img:'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80',
-    desc:'Terraced rice paddies, ancient temples, world-class surf, and spiritual jungle retreats.',
-    overview:'Bali\'s magic lies in its layered beauty — emerald rice terraces in Ubud, dramatic sea temples in Uluwatu, and the spiritual energy that permeates every corner. It\'s the rare destination that satisfies the adventurer, the foodie, and the soul-seeker equally.',
+    desc:'계단식 논, 고대 사원, 세계적인 서핑, 그리고 영적인 정글 리트리트.',
+    overview:'발리의 마법은 층층이 쌓인 아름다움에 있습니다 — 우붓의 에메랄드 계단식 논, 울루와뚜의 극적인 해안 사원, 그리고 모든 곳에 깃든 영적 에너지. 모험가, 미식가, 영혼의 탐구자 모두를 동시에 만족시키는 드문 여행지입니다.',
     itinerary:[
-      {day:'Day 1', items:['Tanah Lot temple at sunset','Seminyak beach &amp; sunset cocktails','Eat at Potato Head Beach Club','Explore Seminyak boutiques']},
-      {day:'Day 2', items:['Tegallalang Rice Terraces (Ubud)','Monkey Forest Sanctuary','Ubud Art Market &amp; Palace','Traditional Kecak dance performance at sunset']},
-      {day:'Day 3', items:['Mount Batur sunrise trek','Tirta Empul holy spring temple','Goa Gajah Elephant Cave','Canggu beach clubs for sunset']}
+      {day:'1일차', items:['일몰 무렵 타나롯 사원 방문','스미냑 해변 &amp; 선셋 칵테일','Potato Head Beach Club 식사','스미냑 부티크 탐방']},
+      {day:'2일차', items:['떼갈랄랑 계단식 논 (우붓)','원숭이 숲 보호구역','우붓 예술 시장 &amp; 왕궁','일몰 무렵 전통 케짝 댄스 공연 관람']},
+      {day:'3일차', items:['바투르 화산 일출 트레킹','뜨르따 엠풀 성수 사원','고아 가자 코끼리 동굴','찬구 비치 클럽에서 일몰 감상']}
     ],
-    food:['Babi Guling (suckling pig) at Ibu Oka Ubud','Nasi Campur at a local warung','Fresh seafood at Jimbaran Bay','Smoothie bowls at Canggu cafes','Bebek Betutu (slow-cooked duck)'],
-    transport:'Rent a scooter (SGD 8–12/day) for flexibility. Bluebird taxis are metered and reputable. GoJek app works well in main tourist areas. No reliable public transport.',
-    costs:[['Budget guesthouse/homestay','SGD 20–45/night'],['Mid-range villa','SGD 60–130/night'],['Local warung meals','SGD 3–8/meal'],['Transport daily','SGD 8–20/day'],['Activities','SGD 5–35/activity']],
-    safetyTips:['Generally very safe for tourists but petty theft exists in busy markets','Be respectful at temples — cover shoulders and knees, wear a sarong','Avoid tap water; drink bottled water only'],
-    photos:['Tegallalang Rice Terraces at sunrise','Tanah Lot temple at sunset','Uluwatu clifftop temple with ocean backdrop'],
-    scams:'Overcharging at taxi ranks outside the airport. Agree on price before riding or use GoJek app.',
-    emergency:'110 (Police) | 118 (Ambulance)',
-    hospital:'BIMC Hospital Kuta | Siloam Hospitals Bali (international standard)'
+    food:['이부 오카 우붓의 바비 굴링 (통돼지 구이)','현지 와룽의 나시 짬뿌르','짐바란만 신선한 해산물','찬구 카페의 스무디 볼','브벡 브뚜뚜 (슬로우 쿡 오리)'],
+    transport:'스쿠터 렌탈 (SGD 8–12/일)로 자유롭게 이동. Bluebird 택시는 미터제로 신뢰할 수 있습니다. GoJek 앱은 주요 관광지에서 잘 작동합니다. 신뢰할 만한 대중교통은 없습니다.',
+    costs:[['저렴한 게스트하우스/홈스테이','SGD 20–45/박'],['중급 빌라','SGD 60–130/박'],['현지 와룽 식사','SGD 3–8/끼'],['일일 교통','SGD 8–20/일'],['액티비티','SGD 5–35/회']],
+    safetyTips:['관광객에게 전반적으로 매우 안전하지만 번화한 시장에서 소매치기 주의','사원에서는 예의를 갖추세요 — 어깨와 무릎을 가리고 사롱을 착용하십시오','수돗물은 피하고 생수만 드십시오'],
+    photos:['일출 무렵의 떼갈랄랑 계단식 논','일몰 무렵의 타나롯 사원','울루와뚜 절벽 사원과 바다 전경'],
+    scams:'공항 밖 택시 승강장에서 바가지 요금 주의. 탑승 전 요금을 미리 합의하거나 GoJek 앱을 이용하십시오.',
+    emergency:'110 (경찰) | 118 (구급)',
+    hospital:'쿠타 BIMC 병원 | 발리 Siloam 병원 (국제 수준)'
   },
   {
     id:'tokyo', name:'Tokyo', country:'Japan', flight:'~7h', budget:'SGD $150–220/day',
     budgetDefault:185, season:'Mar–May, Oct–Nov', risk:'low',
     img:'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80',
-    desc:'Dazzling neon districts, world-class ramen, ancient shrines, and bullet trains — all in one city.',
-    overview:'Tokyo is the world\'s most intricate city — immaculately clean, impossibly efficient, and endlessly surprising. From the sakura serenity of Shinjuku Gyoen to the frenetic energy of Akihabara\'s gaming arcades, no city rewards exploration more generously.',
+    desc:'눈부신 네온 거리, 세계적 라멘, 고대 신사, 그리고 신칸센 — 한 도시 안에 모두.',
+    overview:'도쿄는 세계에서 가장 정교한 도시입니다 — 완벽하게 청결하고, 믿을 수 없을 만큼 효율적이며, 끝없이 놀랍습니다. 신주쿠 교엔의 벚꽃 고요함부터 아키하바라 게임 센터의 열기까지, 탐험에 이토록 풍성하게 보답하는 도시는 없습니다.',
     itinerary:[
-      {day:'Day 1', items:['Senso-ji Temple &amp; Nakamise-dori (Asakusa)','Teamlab Borderless digital art museum','Shibuya Crossing &amp; Shibuya Sky observation deck','Dinner at an izakaya in Shinjuku Golden Gai']},
-      {day:'Day 2', items:['Tsukiji Outer Market breakfast','teamLab Planets Toyosu','Harajuku Takeshita Street &amp; Meiji Shrine','Omakase dinner experience']},
-      {day:'Day 3', items:['Akihabara electronics &amp; anime district','Ueno Zoo &amp; National Museum','Yanaka historic neighbourhood walk','Observation deck at Tokyo Skytree']}
+      {day:'1일차', items:['센소지 사원 &amp; 나카미세도리 (아사쿠사)','teamLab Borderless 디지털 아트 뮤지엄','시부야 스크램블 교차로 &amp; 시부야 스카이 전망대','신주쿠 골든가이 이자카야 저녁 식사']},
+      {day:'2일차', items:['츠키지 장외 시장 아침 식사','teamLab Planets 토요스','하라주쿠 다케시타 거리 &amp; 메이지 신궁','오마카세 디너 경험']},
+      {day:'3일차', items:['아키하바라 전자 &amp; 애니메 지구','우에노 동물원 &amp; 국립박물관','야나카 역사 지구 산책','도쿄 스카이트리 전망대']}
     ],
-    food:['Ramen at Ichiran (solo booth experience)','Sushi at Tsukiji Outer Market','Wagyu beef at a Ginza yakiniku','Convenience store onigiri &amp; matcha soft serve','Tempura at a Shinjuku specialist restaurant'],
-    transport:'IC card (Suica/Pasmo) for all trains and metro. 24/72-hour metro passes available. JR Pass for bullet trains. Taxis are expensive — avoid unless necessary.',
-    costs:[['Budget capsule hotel','SGD 50–80/night'],['Mid-range hotel','SGD 130–200/night'],['Ramen/local meals','SGD 10–20/meal'],['Metro daily','SGD 6–12/day'],['Attractions','SGD 10–30/entry']],
-    safetyTips:['Tokyo is extremely safe — one of the world\'s lowest crime capitals','Lost items are almost always returned to lost-and-found','Cash is still preferred in many traditional restaurants and shops — carry JPY'],
-    photos:['Shibuya Crossing at night from above','Mount Fuji from Kawaguchiko','Cherry blossoms at Shinjuku Gyoen'],
-    scams:'Virtually none. Avoid commission-based guides near Asakusa touting tour packages.',
-    emergency:'110 (Police) | 119 (Fire / Ambulance)',
-    hospital:'Tokyo Medical University Hospital | St. Luke\'s International Hospital'
+    food:['이치란 라멘 (1인 부스 체험)','츠키지 장외 시장 스시','긴자 야키니쿠 와규 쇠고기','편의점 오니기리 &amp; 말차 소프트 아이스크림','신주쿠 전문점 텐푸라'],
+    transport:'IC 카드 (Suica/Pasmo)로 모든 전철 및 지하철 이용. 24/72시간 지하철 패스 구매 가능. 신칸센은 JR 패스 사용. 택시는 요금이 비쌉니다 — 꼭 필요한 경우에만 이용하십시오.',
+    costs:[['저렴한 캡슐 호텔','SGD 50–80/박'],['중급 호텔','SGD 130–200/박'],['라멘/현지 식사','SGD 10–20/끼'],['지하철 일일','SGD 6–12/일'],['관광지 입장료','SGD 10–30/회']],
+    safetyTips:['도쿄는 매우 안전하며 세계 최저 범죄율의 도시 중 하나입니다','분실물은 거의 항상 분실물 센터에 반환됩니다','많은 전통 식당과 상점에서 현금을 선호합니다 — 엔화를 지참하십시오'],
+    photos:['위에서 내려다본 야간 시부야 스크램블 교차로','가와구치코에서 바라본 후지산','신주쿠 교엔의 벚꽃'],
+    scams:'사실상 없습니다. 아사쿠사 인근 관광 패키지를 홍보하는 수수료 기반 가이드는 피하십시오.',
+    emergency:'110 (경찰) | 119 (소방/구급)',
+    hospital:'도쿄의과대학병원 | 성루카 국제병원'
   },
   {
     id:'bangkok', name:'Bangkok', country:'Thailand', flight:'~2h', budget:'SGD $50–90/day',
     budgetDefault:70, season:'Nov–Feb', risk:'low',
     img:'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80',
-    desc:'Floating markets, golden temples, rooftop bars, and some of Asia\'s most vibrant street food.',
-    overview:'Bangkok is a city that grabs you by all five senses — the glittering spires of Wat Arun over the Chao Phraya, the sizzle of pad kra pao on a street cart, the tuk-tuk weaving through traffic, the rooftop at sunset. Chaotic, captivating, unforgettable.',
+    desc:'수상 시장, 황금 사원, 루프탑 바, 그리고 아시아에서 가장 활기찬 길거리 음식.',
+    overview:'방콕은 오감을 단번에 사로잡는 도시입니다 — 짜오프라야강 위에 반짝이는 왓 아룬의 첨탑, 노점에서 지글거리는 팟 끄라파오, 교통 속을 누비는 툭툭, 일몰을 맞이하는 루프탑. 혼란스럽고, 매혹적이며, 결코 잊을 수 없는 도시입니다.',
     itinerary:[
-      {day:'Day 1', items:['Grand Palace &amp; Wat Phra Kaew','Wat Pho reclining Buddha &amp; Thai massage','Chao Phraya River cruise','Asiatique night market']},
-      {day:'Day 2', items:['Chatuchak Weekend Market (Sat/Sun)','Jim Thompson House museum','Terminal 21 shopping mall','Sukhumvit Soi 38 street food']},
-      {day:'Day 3', items:['Wat Arun sunrise views from across the river','Khlong Lat Mayom floating market','Lumphini Park morning walk','Sky bar at Lebua Hotel (State Tower)']}
+      {day:'1일차', items:['왕궁 &amp; 왓 프라깨우','왓 포 와불 &amp; 타이 마사지','짜오프라야강 크루즈','아시아티크 야시장']},
+      {day:'2일차', items:['짜뚜짝 주말 시장 (토/일)','짐 톰슨 하우스 박물관','터미널 21 쇼핑몰','수쿰윗 소이 38 길거리 음식']},
+      {day:'3일차', items:['강 건너에서 바라본 왓 아룬 일출 풍경','클렁 랏 마욤 수상 시장','룸피니 공원 아침 산책','르부아 호텔 (스테이트 타워) 스카이 바']}
     ],
-    food:['Pad Thai at Thip Samai (world famous)','Som Tum papaya salad','Tom Yum Goong at Or Tor Kor Market','Mango sticky rice from street carts','Boat noodles in the old city'],
-    transport:'BTS Skytrain and MRT metro cover most tourist areas. Grab app for taxis (never use unmetered cabs). Tuk-tuks are for experience, not economy. Airport Rail Link to Phaya Thai: 30 min (SGD 2.50).',
-    costs:[['Budget guesthouse (Khao San area)','SGD 20–45/night'],['Mid-range hotel','SGD 60–120/night'],['Street food meals','SGD 3–7/meal'],['BTS/Grab daily','SGD 5–12/day'],['Temple entries','SGD 3–12/entry']],
-    safetyTips:['Very safe for tourists; exercise normal vigilance in crowded areas','Tuk-tuk drivers sometimes take you to gem shops offering "deals" — avoid these detours','Respect dress codes at temples: covered shoulders and knees mandatory'],
-    photos:['Wat Arun at dawn reflecting in the river','Grand Palace golden spires','Chatuchak Market overhead shot'],
-    scams:'"Grand Palace is closed today" tuk-tuk scam — it is almost never closed. Walk in yourself.',
-    emergency:'191 (Police) | 1669 (Ambulance)',
-    hospital:'Bumrungrad International Hospital | Bangkok Hospital (international standard)'
+    food:['팁 사마이의 팟타이 (세계적 명성)','솜땀 파파야 샐러드','오토코 시장의 똠얌꿍','노점의 망고 찰밥','구 도심의 배 국수'],
+    transport:'BTS 스카이트레인과 MRT 지하철이 대부분의 관광 지역 커버. 택시는 Grab 앱 이용 (미터기 없는 택시 절대 탑승 금지). 툭툭은 경험용이지 경제적인 이동 수단이 아닙니다. 공항 링크 파야타이역까지: 30분 (SGD 2.50).',
+    costs:[['저렴한 게스트하우스 (카오산 지역)','SGD 20–45/박'],['중급 호텔','SGD 60–120/박'],['길거리 음식','SGD 3–7/끼'],['BTS/Grab 일일','SGD 5–12/일'],['사원 입장료','SGD 3–12/회']],
+    safetyTips:['관광객에게 매우 안전합니다. 혼잡한 지역에서는 일반적인 주의를 기울이십시오','툭툭 기사가 종종 "특가"를 제공하는 보석 상점으로 데려가려 합니다 — 이런 우회는 피하십시오','사원 복장 규정 준수: 어깨와 무릎을 반드시 가려야 합니다'],
+    photos:['강에 반영된 새벽녘의 왓 아룬','왕궁의 황금 첨탑','짜뚜짝 시장 조감도'],
+    scams:'"왕궁은 오늘 문을 닫았습니다" 툭툭 사기 — 왕궁은 거의 닫지 않습니다. 직접 걸어가십시오.',
+    emergency:'191 (경찰) | 1669 (구급)',
+    hospital:'범룽랏 국제병원 | 방콕 병원 (국제 수준)'
   },
   {
     id:'hongkong', name:'Hong Kong', country:'Hong Kong SAR', flight:'~3.5h', budget:'SGD $120–180/day',
     budgetDefault:150, season:'Oct–Dec', risk:'low',
     img:'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80',
-    desc:'A dazzling skyline, legendary dim sum, night markets, and hiking trails above the city.',
-    overview:'Hong Kong is one of the world\'s great urban spectacles — a vertical city where glass towers rise from Victoria Harbour, ancient temples hide in bustling markets, and Michelin-starred dai pai dongs serve dim sum beside hawker stalls. Compact, thrilling, globally connected.',
+    desc:'눈부신 스카이라인, 전설적인 딤섬, 야시장, 그리고 도시 위의 하이킹 코스.',
+    overview:'홍콩은 세계 최고의 도시 경관 중 하나입니다 — 빅토리아 항구에서 유리 빌딩이 솟아오르고, 고대 사원이 번화한 시장 속에 숨어 있으며, 미슐랭 스타 다이파이동에서 노점 옆 딤섬을 즐길 수 있습니다. 작지만 흥미롭고 세계와 긴밀하게 연결된 도시입니다.',
     itinerary:[
-      {day:'Day 1', items:['Star Ferry across Victoria Harbour','Tsim Sha Tsui Promenade &amp; Avenue of Stars','Peak Tram to Victoria Peak at night','Temple Street Night Market']},
-      {day:'Day 2', items:['Dim sum breakfast in Mong Kok','Wong Tai Sin Temple','Sham Shui Po fabric &amp; electronics market','IFC Mall &amp; harbour waterfront dinner']},
-      {day:'Day 3', items:['Lantau Island &amp; Tian Tan Big Buddha','Po Lin Monastery &amp; Ngong Ping 360 cable car','Cheung Chau island day trip (ferry)','Hong Kong Disneyland (optional)']}
+      {day:'1일차', items:['스타 페리로 빅토리아 항구 횡단','침사추이 해안 산책로 &amp; 스타의 거리','야간 피크 트램으로 빅토리아 피크 방문','템플 스트리트 야시장']},
+      {day:'2일차', items:['몽콕에서 딤섬 아침 식사','황대선 사원','샴수이포 원단 &amp; 전자 제품 시장','IFC 몰 &amp; 항구 워터프런트 저녁 식사']},
+      {day:'3일차', items:['란타우 섬 &amp; 천단 대불','포린 수도원 &amp; 웡핑 360 케이블카','청차우 섬 당일 여행 (페리)','홍콩 디즈니랜드 (선택)']}
     ],
-    food:['Dim sum at Tim Ho Wan (Michelin-starred)','Roast goose at Yung Kee Restaurant','Egg waffles (gai daan zai) from street stalls','BBQ pork bao from a dai pai dong','HK-style milk tea &amp; pineapple bun'],
-    transport:'Octopus card covers MTR, buses, trams, and ferries. Airport Express: 24 min to Central (SGD 18). The tram (HKD 3) on Hong Kong Island is a Hong Kong institution.',
-    costs:[['Budget hostel (Mong Kok)','SGD 55–90/night'],['Mid-range hotel','SGD 130–220/night'],['Char chan teng meals','SGD 8–15/meal'],['MTR daily','SGD 4–8/day'],['Peak Tram (return)','SGD 15–20']],
-    safetyTips:['Extremely safe — one of Asia\'s safest cities for tourists','Traffic drives on the left; look right first when crossing','Typhoon season (May–November): check T-signal alerts; city protocol shuts services at T8+'],
-    photos:['Victoria Harbour skyline from TST at night','Victoria Peak view of Central','Lantau Big Buddha shrouded in mist'],
-    scams:'Tailor shops near tourist areas quoting "special prices" with poor quality. Pre-agree everything in writing.',
-    emergency:'999 (Police / Fire / Ambulance)',
-    hospital:'Queen Mary Hospital | Hong Kong Adventist Hospital (international)'
+    food:['팀호완 딤섬 (미슐랭 스타)','영기 레스토랑 구이 거위','길거리 노점 계란와플 (가이단자이)','다이파이동 BBQ 돼지고기 빵','홍콩식 밀크티 &amp; 파인애플 번'],
+    transport:'옥토퍼스 카드로 MTR, 버스, 트램, 페리 모두 이용 가능. 공항 익스프레스: 센트럴까지 24분 (SGD 18). 홍콩 섬의 트램 (HKD 3)은 홍콩의 명물입니다.',
+    costs:[['저렴한 호스텔 (몽콕)','SGD 55–90/박'],['중급 호텔','SGD 130–220/박'],['차찬탱 식사','SGD 8–15/끼'],['MTR 일일','SGD 4–8/일'],['피크 트램 (왕복)','SGD 15–20']],
+    safetyTips:['매우 안전하며 관광객에게 아시아에서 가장 안전한 도시 중 하나입니다','차량은 좌측 통행입니다. 횡단 시 먼저 오른쪽을 확인하십시오','태풍 시즌 (5월–11월): T 신호 경보를 확인하십시오. T8 이상 시 도시 서비스가 중단됩니다'],
+    photos:['야간 TST에서 바라본 빅토리아 항구 스카이라인','빅토리아 피크에서 내려다본 센트럴','안개에 싸인 란타우 대불'],
+    scams:'관광 지역 인근 맞춤 양복점의 "특가" 저품질 주의. 모든 사항을 서면으로 사전 합의하십시오.',
+    emergency:'999 (경찰/소방/구급)',
+    hospital:'퀸 메리 병원 | 홍콩 어드벤티스트 병원 (국제 수준)'
   },
   {
     id:'kl', name:'Kuala Lumpur', country:'Malaysia', flight:'~1h', budget:'SGD $50–80/day',
     budgetDefault:65, season:'May–Jul', risk:'low',
     img:'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80',
-    desc:'Twin towers, colonial heritage, incredible multicultural food, and lush jungle within the city.',
-    overview:'KL punches well above its weight — world-famous Petronas Towers, the multicultural melting pot of Brickfields and Little India, colonial gems in Merdeka Square, and a hawker food scene that challenges any rival in the region. The most affordable major city in Southeast Asia.',
+    desc:'트윈 타워, 식민지 유산, 놀라운 다문화 음식, 도시 속 울창한 정글.',
+    overview:'쿠알라룸푸르는 규모 이상의 존재감을 발휘합니다 — 세계적으로 유명한 페트로나스 타워, 브릭필즈와 리틀 인디아의 다문화 용광로, 머데카 광장의 식민지 건축 보석, 그리고 지역 어떤 경쟁자도 압도하는 호커 음식 문화. 동남아시아에서 가장 합리적인 주요 도시입니다.',
     itinerary:[
-      {day:'Day 1', items:['Petronas Twin Towers &amp; KLCC Park','Aquaria KLCC aquarium','Pavilion KL shopping &amp; lunch','Bukit Bintang evening hawker walk']},
-      {day:'Day 2', items:['Batu Caves Hindu temple &amp; rainbow stairs','Thean Hou Temple panoramic views','Chinatown Petaling Street market','Central Market for local crafts']},
-      {day:'Day 3', items:['Merdeka Square &amp; Sultan Abdul Samad Building','Islamic Arts Museum Malaysia','KLCC skybridge tour (advance booking)','Jalan Alor food street for dinner']}
+      {day:'1일차', items:['페트로나스 트윈 타워 &amp; KLCC 공원','아쿠아리아 KLCC 수족관','파빌리온 KL 쇼핑 &amp; 점심','부킷 빈탕 저녁 호커 거리 산책']},
+      {day:'2일차', items:['바투 동굴 힌두 사원 &amp; 무지개 계단','티안 후 사원 파노라마 전망','차이나타운 페탈링 스트리트 시장','센트럴 마켓 현지 공예품 구경']},
+      {day:'3일차', items:['머데카 광장 &amp; 술탄 압둘 사마드 빌딩','말레이시아 이슬람 예술 박물관','KLCC 스카이브리지 투어 (사전 예약 필요)','잘란 알로 푸드 스트리트 저녁 식사']}
     ],
-    food:['Nasi Lemak at Village Park Restaurant','Char Kway Teow at Imbi Market','Roti Canai with dhal at any mamak stall','Satay Kajang at Sate Kajang Hj Samuri','Cendol dessert in Chinatown'],
-    transport:'Grab app is the gold standard. LRT/MRT/Monorail metro covers main areas. KL Sentral is the transport hub. Taxi meters often ignored — use Grab.',
-    costs:[['Budget hostel','SGD 18–40/night'],['Mid-range hotel','SGD 60–110/night'],['Mamak meals','SGD 3–7/meal'],['Grab rides','SGD 3–8/trip'],['Attractions','SGD 5–20/entry']],
-    safetyTips:['Generally safe; be vigilant in busy areas like Petaling Street (Chinatown) for pickpockets','Avoid walking alone at night in less-populated areas','Modest dress required for religious sites'],
-    photos:['Petronas Towers from KLCC Park at night','Batu Caves rainbow staircase','Thean Hou Temple from the garden'],
-    scams:'Unlicensed taxis overcharging from airports. Always use Grab. "Student surveys" near Petaling Street often lead to hard-sell situations.',
-    emergency:'999 (Police) | 999 (Ambulance)',
-    hospital:'KPJ Damansara Specialist Hospital | Pantai Hospital KL (international)'
+    food:['Village Park Restaurant의 나시 르막','임비 마켓의 차 쾌이 테오','어느 마막 스탠드에서나 로티 카나이와 달','Sate Kajang Hj Samuri의 사테이 카장','차이나타운 센돌 디저트'],
+    transport:'Grab 앱이 최고의 선택입니다. LRT/MRT/모노레일이 주요 지역 커버. KL 센트랄이 교통 허브. 택시 미터기는 자주 무시되므로 Grab을 이용하십시오.',
+    costs:[['저렴한 호스텔','SGD 18–40/박'],['중급 호텔','SGD 60–110/박'],['마막 식사','SGD 3–7/끼'],['Grab 이동','SGD 3–8/회'],['관광지 입장료','SGD 5–20/회']],
+    safetyTips:['전반적으로 안전합니다. 페탈링 스트리트(차이나타운) 등 혼잡한 지역에서 소매치기 주의','인적이 드문 지역에서 야간 혼자 보행 자제','종교 유적지에서는 단정한 복장 필수'],
+    photos:['야간 KLCC 공원에서 바라본 페트로나스 타워','바투 동굴 무지개 계단','정원에서 바라본 티안 후 사원'],
+    scams:'공항에서 무면허 택시의 바가지 요금 주의. 항상 Grab을 이용하십시오. 페탈링 스트리트 인근 "학생 설문조사"는 강매로 이어지는 경우가 많습니다.',
+    emergency:'999 (경찰) | 999 (구급)',
+    hospital:'KPJ 다마사라 전문 병원 | 판타이 병원 KL (국제 수준)'
   },
   {
     id:'maldives', name:'Maldives', country:'Maldives', flight:'~4.5h', budget:'SGD $200–400/day',
     budgetDefault:300, season:'Nov–Apr', risk:'low',
     img:'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80',
-    desc:'Overwater bungalows, crystal-clear lagoons, vibrant coral reefs, and total disconnection.',
-    overview:'The Maldives is the definition of a bucket-list destination — 1,200 coral islands scattered across the Indian Ocean, each surrounded by impossibly turquoise water. Whether you\'re honeymooning in an overwater villa or diving world-class reefs, the Maldives delivers perfection.',
+    desc:'수상 방갈로, 수정처럼 맑은 석호, 생동감 넘치는 산호초, 그리고 완전한 일상 탈출.',
+    overview:'몰디브는 버킷리스트 여행지의 정의 그 자체입니다 — 인도양 위에 흩뿌려진 1,200개의 산호 섬, 믿기 어려울 만큼 청록빛인 바다. 수상 빌라에서 신혼여행을 즐기든 세계적인 산호초에서 다이빙을 하든, 몰디브는 완벽함을 선사합니다.',
     itinerary:[
-      {day:'Day 1', items:['Speedboat or seaplane transfer to your resort island','Check in &amp; first snorkel on the house reef','Sunset cocktails over the lagoon','Beachside seafood dinner']},
-      {day:'Day 2', items:['Sunrise yoga on the overwater deck','Guided scuba dive or snorkel with manta rays','Dolphin cruise at dusk','Private beach fire dining experience']},
-      {day:'Day 3', items:['Visit Malé (capital island) on day trip','Local market &amp; Friday Mosque','Sandbank picnic excursion','Night snorkelling with bioluminescent plankton']}
+      {day:'1일차', items:['스피드보트 또는 수상비행기로 리조트 섬 이동','체크인 &amp; 하우스 리프에서 첫 스노클링','석호 위에서 선셋 칵테일','해변가 해산물 저녁 식사']},
+      {day:'2일차', items:['수상 데크에서 일출 요가','가이드 스쿠버 다이빙 또는 만타레이 스노클링','황혼의 돌핀 크루즈','프라이빗 비치 모닥불 다이닝 경험']},
+      {day:'3일차', items:['말레 (수도 섬) 당일 여행','현지 시장 &amp; 금요 모스크','사주 피크닉 소풍','발광 플랑크톤과 함께하는 야간 스노클링']}
     ],
-    food:['Fresh tuna curry (mas riha)','Hedhikaa (short eats) in Malé market','Garudhiya (tuna fish soup) with rice','Exotic seafood platter at resort','Tropical fruit juices — papaya, mango, passion fruit'],
-    transport:'Seaplane transfers are scenic but expensive (SGD 300–500 return). Speed boats are cheaper. Internal transport is by boat between islands — arrange through your resort.',
-    costs:[['Budget guesthouse (local islands)','SGD 80–140/night'],['Mid-range resort','SGD 250–500/night'],['Luxury overwater villa','SGD 700–2,000+/night'],['Resort meals','SGD 30–80/meal'],['Dive excursions','SGD 60–120/dive']],
-    safetyTips:['Very safe for tourists on resort islands','Always wear reef-safe sunscreen — bleaching is a serious local concern','Alcohol is only permitted on licensed resort islands — strictly prohibited elsewhere'],
-    photos:['Overwater bungalow at sunrise with turquoise water','Manta ray underwater shot','Aerial view of a coral atoll ring'],
-    scams:'Very rare. Ensure transfer arrangements are confirmed before departure to avoid inflated on-arrival prices.',
-    emergency:'+960 119 (Police) | +960 102 (Ambulance)',
-    hospital:'ADK Hospital Malé | Indira Gandhi Memorial Hospital (main public hospital)'
+    food:['신선한 참치 카레 (mas riha)','말레 시장의 헤디카아 (간식)','가루디야 (참치 수프)와 밥','리조트 이색 해산물 플래터','열대 과일 주스 — 파파야, 망고, 패션프루트'],
+    transport:'수상비행기 이동은 경치가 좋지만 비쌉니다 (왕복 SGD 300–500). 스피드보트가 더 저렴합니다. 섬 간 이동은 보트로만 가능합니다 — 리조트를 통해 예약하십시오.',
+    costs:[['저렴한 게스트하우스 (현지 섬)','SGD 80–140/박'],['중급 리조트','SGD 250–500/박'],['럭셔리 수상 빌라','SGD 700–2,000+/박'],['리조트 식사','SGD 30–80/끼'],['다이빙 투어','SGD 60–120/다이브']],
+    safetyTips:['리조트 섬에서는 관광객에게 매우 안전합니다','산호초 안전 자외선 차단제를 항상 사용하십시오 — 산호 백화가 심각한 현지 문제입니다','주류는 허가된 리조트 섬에서만 허용됩니다 — 그 외 지역에서는 엄격히 금지됩니다'],
+    photos:['청록빛 바다 위 일출 수상 방갈로','수중 만타레이 사진','산호 환초의 항공 촬영'],
+    scams:'매우 드뭅니다. 도착 시 과도한 요금을 피하려면 출발 전 이동 수단을 반드시 확인하십시오.',
+    emergency:'+960 119 (경찰) | +960 102 (구급)',
+    hospital:'말레 ADK 병원 | 인디라 간디 기념 병원 (주요 공립 병원)'
   },
   {
     id:'phuket', name:'Phuket &amp; Krabi', country:'Thailand', flight:'~1.5h', budget:'SGD $70–120/day',
     budgetDefault:95, season:'Nov–Apr', risk:'low',
     img:'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80',
-    desc:'Limestone karsts, emerald bays, island-hopping adventures, and legendary Thai beaches.',
-    overview:'Phuket is Thailand\'s island gateway — Patong\'s buzzing beach strip, the cultural richness of Phuket Town, and the launch pad for island-hopping to the spectacular Phi Phi Islands. Krabi delivers the drama: limestone towers rising from turquoise water at Railay Beach, accessible only by longtail boat.',
+    desc:'석회암 카르스트, 에메랄드 만, 섬 호핑 어드벤처, 그리고 전설적인 태국 해변.',
+    overview:'푸껫은 태국의 섬 관문입니다 — 파통의 활기찬 해변 거리, 푸껫 타운의 풍부한 문화, 그리고 장관인 피피 섬으로의 섬 호핑 출발지. 끄라비는 드라마를 선사합니다: 청록빛 바다에서 솟아오른 석회암 절벽의 라일레이 비치, 롱테일 보트로만 접근 가능한 비밀의 해변.',
     itinerary:[
-      {day:'Day 1', items:['Arrive Phuket — check in at Patong or Kata Beach','Big Buddha hilltop viewpoint','Phuket Old Town heritage streets','Bangla Road night market experience']},
-      {day:'Day 2', items:['Full-day Phi Phi Islands speedboat tour','Maya Bay (The Beach film location)','Snorkelling at Pileh Lagoon','Sunset at Phi Phi Viewpoint']},
-      {day:'Day 3', items:['Speedboat to Krabi (2h)','Railay Beach by longtail — only accessible by sea','Rock climbing or kayaking in karst caves','Four Islands sunset dinner cruise']}
+      {day:'1일차', items:['푸껫 도착 — 파통 또는 카타 해변 숙소 체크인','빅 부다 언덕 전망대','푸껫 올드타운 헤리티지 거리','방라 로드 야시장 체험']},
+      {day:'2일차', items:['피피 섬 스피드보트 투어 (종일)','마야 베이 (영화 "더 비치" 촬영지)','필레 석호 스노클링','피피 뷰포인트에서 일몰 감상']},
+      {day:'3일차', items:['스피드보트로 끄라비 이동 (2시간)','롱테일 보트로 라일레이 비치 — 바다로만 접근 가능','암벽 등반 또는 카르스트 동굴 카약','4개 섬 일몰 디너 크루즈']}
     ],
-    food:['Khao Tom (rice porridge) breakfast at markets','Fresh seafood at Rawai Seafood Market','Pad see ew at a Phuket Town kopitiam','Massaman curry with roti','Mango sticky rice from night market stalls'],
-    transport:'Songthaew shared taxis within Phuket (SGD 1–3). Grab app works in Phuket. Rent a scooter for Phuket Town exploration (SGD 10/day). Ferries and speedboats for islands.',
-    costs:[['Budget guesthouse','SGD 25–55/night'],['Mid-range beach resort','SGD 70–150/night'],['Local meals','SGD 4–10/meal'],['Island tours','SGD 40–80/person'],['Scooter rental','SGD 10–15/day']],
-    safetyTips:['Red flag warnings on beaches must be respected — rip currents are lethal','Wear a helmet on scooters — always. Police checkpoints fine unhelmeted riders','Avoid isolated beaches at night'],
-    photos:['Railay Beach from the water (dramatic karsts)','Maya Bay turquoise lagoon','Phi Phi Islands aerial view'],
-    scams:'Jet ski damage scams — photograph jet ski before use and keep receipt. "Special price" gem stores near tourist beaches.',
-    emergency:'191 (Police) | 1669 (Ambulance)',
-    hospital:'Patong Hospital | Bangkok Hospital Phuket (international standard)'
+    food:['시장에서 카오톰 (쌀죽) 아침 식사','라와이 해산물 시장 신선 해산물','푸껫 타운 코피티암의 팟씨이우','마사만 카레와 로티','야시장 노점 망고 찰밥'],
+    transport:'푸껫 내 썽태우 합승 택시 (SGD 1–3). Grab 앱 푸껫에서 사용 가능. 푸껫 타운 탐방을 위한 스쿠터 렌탈 (SGD 10/일). 섬 이동은 페리와 스피드보트.',
+    costs:[['저렴한 게스트하우스','SGD 25–55/박'],['중급 해변 리조트','SGD 70–150/박'],['현지 식사','SGD 4–10/끼'],['섬 투어','SGD 40–80/인'],['스쿠터 렌탈','SGD 10–15/일']],
+    safetyTips:['해변의 적색 깃발 경고는 반드시 준수하십시오 — 이안류는 생명을 위협합니다','스쿠터 탑승 시 항상 헬멧을 착용하십시오. 경찰 검문소에서 미착용자에게 벌금을 부과합니다','야간에 외진 해변 방문 자제'],
+    photos:['바다에서 바라본 라일레이 비치 (극적인 카르스트)','마야 베이 청록빛 석호','피피 섬 항공 촬영'],
+    scams:'제트스키 손상 사기 — 이용 전 반드시 사진 촬영 및 영수증 보관. 관광 해변 인근 "특가" 보석 상점 주의.',
+    emergency:'191 (경찰) | 1669 (구급)',
+    hospital:'파통 병원 | 방콕 병원 푸껫 (국제 수준)'
   },
   {
     id:'sydney', name:'Sydney', country:'Australia', flight:'~8h', budget:'SGD $180–260/day',
     budgetDefault:220, season:'Sep–Nov, Mar–May', risk:'low',
     img:'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80',
-    desc:'Iconic harbour, world-class beaches, multicultural food scene, and outdoor adventure.',
-    overview:'Sydney is Australia\'s showstopper — the Harbour Bridge arcing over sun-dappled water, the Opera House sails catching morning light, Bondi Beach surfers at 7am. Beyond the postcard, Sydney rewards exploration: the Blue Mountains an hour west, ferry rides to secluded harbour beaches, and an immigrant food scene of remarkable diversity.',
+    desc:'상징적인 항구, 세계적인 해변, 다문화 음식 문화, 그리고 야외 모험.',
+    overview:'시드니는 호주의 대표 명소입니다 — 햇빛에 반짝이는 수면 위를 아치형으로 가로지르는 하버 브리지, 아침 빛을 받는 오페라 하우스의 돛, 오전 7시의 본다이 비치 서퍼들. 엽서 속 풍경을 넘어, 시드니는 탐험에 보답합니다. 서쪽으로 한 시간 거리의 블루 마운틴, 숨겨진 항구 해변으로의 페리 여행, 놀라운 다양성의 이민자 음식 문화까지.',
     itinerary:[
-      {day:'Day 1', items:['Sydney Opera House tour','Royal Botanic Garden walk','The Rocks heritage precinct &amp; market','Circular Quay dinner with harbour views']},
-      {day:'Day 2', items:['Bondi Beach morning surf or walk','Bondi to Coogee Coastal Walk (6km)','Newtown for eclectic cafes &amp; vintage shops','Darling Harbour evening waterfront']},
-      {day:'Day 3', items:['Blue Mountains day trip (Katoomba)','Three Sisters rock formation &amp; Scenic Railway','Echo Point panoramic views','Return via Parramatta for heritage walk']}
+      {day:'1일차', items:['시드니 오페라 하우스 투어','왕립 식물원 산책','더 록스 헤리티지 지구 &amp; 마켓','서큘러 키 항구 전망 저녁 식사']},
+      {day:'2일차', items:['본다이 비치 아침 서핑 또는 산책','본다이에서 쿠지까지 해안 산책로 (6km)','뉴타운 개성 있는 카페 &amp; 빈티지 숍','달링 하버 저녁 워터프런트']},
+      {day:'3일차', items:['블루 마운틴 당일 여행 (카툼바)','쓰리 시스터즈 암석과 시닉 레일웨이','에코 포인트 파노라마 전망','패러마타 경유 귀환, 헤리티지 산책']}
     ],
-    food:['Flat white at a Surry Hills specialty cafe','Barramundi fish &amp; chips at a harbour pub','Yum cha in Chinatown (Haymarket)','Gelato at Messina Surry Hills','Avocado toast at a Bondi Beach cafe'],
-    transport:'Opal card covers all trains, buses, ferries, and light rail. The ferry to Manly is a must-do harbour experience (SGD 7 return). Uber is widely available. Airport train to Central: 13 min (SGD 18).',
-    costs:[['Budget hostel (CBD)','SGD 45–75/night'],['Mid-range hotel','SGD 160–280/night'],['Cafe meals','SGD 15–25/meal'],['Transport daily','SGD 10–18/day'],['Attractions','SGD 0–35/entry']],
-    safetyTips:['Very safe — standard big-city precautions apply','Always swim between the flags at patrolled beaches — rips can be deadly','Sun protection is non-negotiable — UV index is extreme; SPF 50+ mandatory'],
-    photos:['Sydney Opera House from Circular Quay at sunrise','Bondi Beach from the cliffs','Harbour Bridge at night'],
-    scams:'Very rare. Over-priced tourist menus near Darling Harbour — walk one block inland for better value.',
-    emergency:'000 (Police / Fire / Ambulance)',
-    hospital:'Royal Prince Alfred Hospital | St Vincent\'s Hospital Sydney'
+    food:['서리 힐스 스페셜티 카페의 플랫 화이트','항구 펍의 바라문디 피시 &amp; 칩스','차이나타운 (헤이마켓) 딤섬','메시나 서리 힐스 젤라토','본다이 비치 카페의 아보카도 토스트'],
+    transport:'오팔 카드로 모든 기차, 버스, 페리, 경전철 이용 가능. 맨리행 페리는 꼭 경험해야 할 항구 여행입니다 (왕복 SGD 7). Uber 광범위하게 이용 가능. 공항 기차 센트럴역까지: 13분 (SGD 18).',
+    costs:[['저렴한 호스텔 (CBD)','SGD 45–75/박'],['중급 호텔','SGD 160–280/박'],['카페 식사','SGD 15–25/끼'],['일일 교통','SGD 10–18/일'],['관광지 입장료','SGD 0–35/회']],
+    safetyTips:['매우 안전합니다 — 대도시 일반적인 주의 사항 적용','순찰이 있는 해변에서는 항상 깃발 사이에서만 수영하십시오 — 이안류가 위험할 수 있습니다','자외선 차단은 필수입니다 — UV 지수가 매우 높으며 SPF 50+ 필수'],
+    photos:['일출 무렵 서큘러 키에서 바라본 시드니 오페라 하우스','절벽에서 바라본 본다이 비치','야간 하버 브리지'],
+    scams:'매우 드뭅니다. 달링 하버 인근 관광객용 과대 가격 메뉴 주의 — 한 블록 안쪽으로 들어가면 더 좋은 가격을 찾을 수 있습니다.',
+    emergency:'000 (경찰/소방/구급)',
+    hospital:'로열 프린스 알프레드 병원 | 세인트 빈센트 병원 시드니'
   },
   {
     id:'taipei', name:'Taipei', country:'Taiwan', flight:'~4.5h', budget:'SGD $80–130/day',
     budgetDefault:105, season:'Oct–Dec', risk:'low',
     img:'https://images.unsplash.com/photo-1470004914212-05527e49370b?w=800&q=80',
-    desc:'Night markets, Taipei 101, mountain hot springs, incredible bubble tea, and friendly locals.',
-    overview:'Taipei is Southeast Asia\'s most underrated city — a beautifully liveable metropolis with extraordinary street food culture, efficient metro, and dramatic mountain scenery 30 minutes from the centre. The night markets are the beating heart of social life, and the locals are among the friendliest in Asia.',
+    desc:'야시장, 타이베이 101, 산 속 온천, 놀라운 버블티, 그리고 친절한 현지인들.',
+    overview:'타이베이는 동남아시아에서 가장 저평가된 도시입니다 — 비범한 길거리 음식 문화, 효율적인 지하철, 시내 중심에서 30분 거리의 드라마틱한 산악 경관을 갖춘 아름답고 살기 좋은 도시. 야시장은 사교 생활의 심장박동이며, 현지인들은 아시아에서 가장 친절한 사람들 중 하나입니다.',
     itinerary:[
-      {day:'Day 1', items:['Taipei 101 observatory (89th floor views)','Xinyi shopping district lunch','Chiang Kai-shek Memorial Hall &amp; Liberty Square','Shilin Night Market evening feast']},
-      {day:'Day 2', items:['Jiufen Old Street (Gold Rush-era hill town)','Yehliu Geopark sea rock formations','Raohe Night Market return to Taipei','Ximending pedestrian shopping district']},
-      {day:'Day 3', items:['Beitou hot spring spa morning','Yangmingshan National Park volcanic walks','Longshan Temple prayer ceremony','Yongkang Street for bubble tea &amp; dumplings']}
+      {day:'1일차', items:['타이베이 101 전망대 (89층 조망)','신이 쇼핑 지구 점심','장제스 기념관 &amp; 자유 광장','스린 야시장 저녁 음식 축제']},
+      {day:'2일차', items:['지우펀 구 거리 (금광 시대 언덕 마을)','예류 지질 공원 해암 지형','라오허 야시장 후 타이베이로 귀환','시먼딩 보행자 쇼핑 지구']},
+      {day:'3일차', items:['베이터우 온천 스파 오전','양밍산 국립공원 화산 트레킹','룽산 사원 기도 의식','융캉 스트리트 버블티 &amp; 만두']}
     ],
-    food:['Xiao long bao (soup dumplings) at Din Tai Fung HQ','Oyster vermicelli at Shilin Night Market','Pork chop rice at Formosa Chang','Bubble milk tea at Chun Shui Tang (the original)','Scallion pancakes from a street cart'],
-    transport:'EasyCard covers all MRT, buses, and YouBike. MRT is clean, fast, efficient. Airport MRT to Taipei Main Station: 35 min (SGD 7.50). YouBike rental for short trips (SGD 0.25/30 min).',
-    costs:[['Budget hostel','SGD 25–50/night'],['Mid-range hotel','SGD 80–140/night'],['Night market meals','SGD 3–8/meal'],['MRT daily','SGD 3–6/day'],['Jiufen day trip','SGD 15–25']],
-    safetyTips:['One of Asia\'s safest cities — negligible violent crime','Typhoon season June–October: monitor CWB weather warnings','Traffic scooters can be aggressive; use pedestrian crossings only'],
-    photos:['Taipei 101 from Elephant Mountain at dusk','Jiufen hillside lantern-lit teahouses','Longshan Temple incense smoke interior'],
-    scams:'Extremely rare. Occasional overcharging in tourist-heavy Jiufen shops — compare prices before buying.',
-    emergency:'110 (Police) | 119 (Fire / Ambulance)',
-    hospital:'National Taiwan University Hospital | Taipei Medical University Hospital'
+    food:['딘타이펑 본점 소롱포 (샤오롱바오)','스린 야시장 굴 국수','포르모사 창 돼지고기 덮밥','춘수이탕 버블 밀크티 (원조)','길거리 수레의 파 전병'],
+    transport:'이지카드로 모든 MRT, 버스, YouBike 이용 가능. MRT는 청결하고 빠르며 효율적입니다. 공항 MRT 타이베이 메인역까지: 35분 (SGD 7.50). 단거리 이동에 YouBike 렌탈 (SGD 0.25/30분).',
+    costs:[['저렴한 호스텔','SGD 25–50/박'],['중급 호텔','SGD 80–140/박'],['야시장 식사','SGD 3–8/끼'],['MRT 일일','SGD 3–6/일'],['지우펀 당일 여행','SGD 15–25']],
+    safetyTips:['아시아에서 가장 안전한 도시 중 하나 — 강력 범죄 거의 없음','태풍 시즌 6월–10월: 중앙기상국 기상 경보 모니터링 필수','도로의 스쿠터가 공격적일 수 있습니다. 횡단보도만 이용하십시오'],
+    photos:['황혼 무렵 코끼리 산에서 바라본 타이베이 101','지우펀 언덕 등불 켜진 찻집','룽산 사원 향연기 내부'],
+    scams:'극히 드뭅니다. 관광객이 많은 지우펀 상점에서 간혹 바가지 요금 — 구매 전 가격 비교 필수.',
+    emergency:'110 (경찰) | 119 (소방/구급)',
+    hospital:'국립 대만대학병원 | 타이베이의과대학 부속병원'
   },
   {
     id:'hanoi', name:'Hanoi', country:'Vietnam', flight:'~2.5h', budget:'SGD $40–70/day',
     budgetDefault:55, season:'Oct–Apr', risk:'low',
     img:'https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&q=80',
-    desc:'Thousand-year-old Old Quarter, Hoan Kiem Lake, pho at dawn, and French colonial charm.',
-    overview:'Hanoi wears its age gracefully — the maze-like Old Quarter\'s 36 guild streets, the serene Hoan Kiem Lake at the city\'s heart, the faded grandeur of French colonial boulevards, and the perpetual dawn ritual of pho breakfast. Vietnam\'s capital city rewards the slow traveller who surrenders to its rhythm.',
+    desc:'천 년의 역사를 가진 구시가지, 호안끼엠 호수, 새벽 쌀국수, 그리고 프랑스 식민지 시대의 매력.',
+    overview:'하노이는 세월을 우아하게 품고 있습니다 — 미로 같은 구시가지 36개 길드 거리, 도심 한가운데 고요한 호안끼엠 호수, 빛바랜 프랑스 식민지 대로의 위엄, 그리고 변함없는 새벽 쌀국수 의식. 베트남의 수도는 그 리듬에 몸을 맡기는 여유로운 여행자에게 보답합니다.',
     itinerary:[
-      {day:'Day 1', items:['Hoan Kiem Lake &amp; Ngoc Son Temple','Old Quarter 36 Streets walking tour','Bun cha lunch at a local restaurant','Temple of Literature (Van Mieu)','Beer corner on Ta Hien Street evening']},
-      {day:'Day 2', items:['Ho Chi Minh Mausoleum &amp; Ba Dinh Square','One Pillar Pagoda','Vietnam Museum of Ethnology','Tran Quoc Pagoda on West Lake','West Lake sunset at a lakeside cafe']},
-      {day:'Day 3', items:['Ha Long Bay full-day cruise (depart 8am)','Kayaking through karst caves','Seafood lunch on the boat','Return Hanoi — night train option to Hoi An']}
+      {day:'1일차', items:['호안끼엠 호수 &amp; 응옥선 사원','구시가지 36거리 도보 투어','현지 식당에서 분짜 점심','문묘 (반 미에우)','저녁 타 히엔 거리 맥주 골목']},
+      {day:'2일차', items:['호찌민 묘 &amp; 바딘 광장','일주사','베트남 민족학 박물관','서호 쩐 꾸옥 탑','서호 호숫가 카페에서 일몰 감상']},
+      {day:'3일차', items:['하롱베이 종일 크루즈 (오전 8시 출발)','카르스트 동굴 카약','선상 해산물 점심','하노이 귀환 — 호이안행 야간 기차 옵션']}
     ],
-    food:['Pho bo (beef noodle soup) for breakfast','Bun cha (grilled pork with noodles) at Huong Lien','Banh mi from Banh Mi 25 on Hang Ca','Cha ca (turmeric fish) at Cha Ca La Vong','Egg coffee (ca phe trung) at Cafe Giang'],
-    transport:'Grab app for taxis and motorbike rides. Cyclo (cycle rickshaws) for Old Quarter sightseeing experience. Ha Long Bay tours depart from Hanoi with bus transfer. No practical metro yet.',
-    costs:[['Budget guesthouse (Old Quarter)','SGD 15–35/night'],['Mid-range boutique hotel','SGD 40–80/night'],['Street food meals','SGD 2–5/meal'],['Grab rides','SGD 2–6/trip'],['Ha Long Bay day tour','SGD 55–100/person']],
-    safetyTips:['Generally safe; watch for motorbike bag-snatching on pavements — keep bags on inside shoulder','Traffic is chaotic — look all ways and walk steadily across roads; vehicles will navigate around you','Drink bottled water only; avoid ice in street stalls'],
-    photos:['Hoan Kiem Lake at dawn with Turtle Tower','Old Quarter narrow street with colourful facades','Ha Long Bay limestone karsts at sunrise'],
-    scams:'Unofficial "fix-it" helpers at bus/train stations charging high fees. Book tours through reputable guesthouses. Shoe-shine scam near Hoan Kiem Lake.',
-    emergency:'113 (Police) | 115 (Ambulance)',
-    hospital:'Hanoi French Hospital | Vinmec International Hospital (international standard)'
+    food:['아침 식사 쌀국수 (Pho bo)','흐엉 리엔의 분짜 (숯불구이 돼지고기 국수)','항 까 거리 반미 25의 바게트 샌드위치','짜 까 라 봉의 강황 생선 구이 (Cha ca)','카페 장의 에그 커피 (ca phe trung)'],
+    transport:'Grab 앱으로 택시 및 오토바이 이용. 삼륜 자전거 (씩로)로 구시가지 관광 체험. 하롱베이 투어는 하노이에서 버스 포함 출발. 아직 실용적인 지하철 없음.',
+    costs:[['저렴한 게스트하우스 (구시가지)','SGD 15–35/박'],['중급 부티크 호텔','SGD 40–80/박'],['길거리 음식','SGD 2–5/끼'],['Grab 이동','SGD 2–6/회'],['하롱베이 당일 투어','SGD 55–100/인']],
+    safetyTips:['전반적으로 안전합니다. 보도에서 오토바이 핸드백 날치기 주의 — 가방을 안쪽 어깨에 메십시오','교통이 혼잡합니다 — 모든 방향을 확인하고 일정한 속도로 도로를 건너십시오. 차량이 알아서 피해갑니다','생수만 마시십시오. 길거리 노점의 얼음은 피하십시오'],
+    photos:['새벽의 거북이 탑과 호안끼엠 호수','화려한 파사드의 구시가지 좁은 골목','일출 무렵 하롱베이 석회암 봉우리'],
+    scams:'버스/기차역의 비공식 "도우미"의 높은 수수료 주의. 신뢰할 수 있는 게스트하우스를 통해 투어를 예약하십시오. 호안끼엠 호수 인근 구두닦이 사기.',
+    emergency:'113 (경찰) | 115 (구급)',
+    hospital:'하노이 프랑스 병원 | Vinmec 국제병원 (국제 수준)'
   }
 ];
 
@@ -851,11 +851,11 @@ const currencies = [
 ];
 
 const packItems = {
-  'Documents':['Passport (validity > 6 months)','Visa documents / e-Visa printout','Travel insurance certificate','Flight e-tickets printout','Hotel confirmation printouts','Emergency contact card','International driving permit (if needed)'],
-  'Clothing':['Lightweight shirts / tops (×5)','Shorts or light trousers (×3)','Smart casual outfit for restaurants','Swimwear (×2)','Comfortable walking shoes','Flip flops / sandals','Light rain jacket / poncho'],
-  'Electronics':['Phone charger &amp; adapter','Portable power bank (≥10,000mAh)','Universal travel adaptor','Earphones / noise-cancelling headphones','Camera &amp; spare memory cards','Laptop / tablet (if needed)','SIM card or e-SIM arranged'],
-  'Medication':['Personal prescription medications','Antihistamines','Diarrhoea relief (Imodium)','Paracetamol / ibuprofen','Antiseptic cream &amp; plasters','Mosquito repellent (DEET 30%+)','Oral rehydration salts'],
-  'Travel Essentials':['Sunscreen SPF 50+','Reusable water bottle','Travel-size toiletries','Money belt / hidden wallet','Padlock for hostel lockers','Sarong / light scarf (temple visits)','Snacks for the journey']
+  '서류':['여권 (유효기간 6개월 이상)','비자 서류 / 전자비자 출력본','여행자 보험 증명서','항공권 e-티켓 출력본','호텔 예약 확인서 출력본','긴급 연락처 카드','국제 운전 면허증 (필요 시)'],
+  '의류':['가벼운 셔츠/상의 (×5벌)','반바지 또는 얇은 긴바지 (×3벌)','식당용 스마트 캐주얼 복장','수영복 (×2벌)','편안한 워킹화','슬리퍼/샌들','가벼운 우비/판초'],
+  '전자기기':['휴대폰 충전기 &amp; 어댑터','휴대용 보조 배터리 (≥10,000mAh)','만능 여행용 멀티 어댑터','이어폰/노이즈 캔슬링 헤드폰','카메라 &amp; 여분 메모리 카드','노트북/태블릿 (필요 시)','SIM 카드 또는 e-SIM 준비 완료'],
+  '의약품':['개인 처방 의약품','항히스타민제','지사제 (이모디움)','타이레놀/이부프로펜','소독 크림 &amp; 밴드','모기 기피제 (DEET 30% 이상)','경구 수분 보충제'],
+  '여행 필수품':['자외선 차단제 SPF 50+','재사용 가능 물병','여행용 세면도구','복대/숨김 지갑','호스텔 사물함용 자물쇠','사롱/가벼운 스카프 (사원 방문용)','여행 중 간식']
 };
 
 // ═══════════════════ RENDER CARDS ═══════════════════
@@ -875,7 +875,7 @@ function renderCards() {
           <span>💰 ${c.budget}</span>
           <span>🌤 ${c.season}</span>
         </div>
-        <button class="card-btn" onclick="openModal('${c.id}')">View Guide</button>
+        <button class="card-btn" onclick="openModal('${c.id}')">가이드 보기</button>
       </div>
     </div>
   `).join('');
@@ -893,11 +893,11 @@ function renderModals() {
       </div>
       <div class="modal-body">
         <div class="msec">
-          <div class="msec-title">Overview</div>
+          <div class="msec-title">개요</div>
           <p>${c.overview}</p>
         </div>
         <div class="msec">
-          <div class="msec-title">Suggested 3-Day Itinerary</div>
+          <div class="msec-title">추천 3일 일정</div>
           ${c.itinerary.map(d => `
             <div class="day-block">
               <h4>${d.day}</h4>
@@ -906,23 +906,23 @@ function renderModals() {
           `).join('')}
         </div>
         <div class="msec">
-          <div class="msec-title">Food &amp; Drink</div>
+          <div class="msec-title">음식 &amp; 음료</div>
           <div class="pill-list">${c.food.map(f => `<span class="pill">${f}</span>`).join('')}</div>
         </div>
         <div class="msec">
-          <div class="msec-title">Getting Around</div>
+          <div class="msec-title">현지 교통</div>
           <p>${c.transport}</p>
         </div>
         <div class="msec">
-          <div class="msec-title">Estimated Costs (per night / per meal)</div>
+          <div class="msec-title">예상 비용 (1박 / 1끼)</div>
           <table class="cost-tbl">${c.costs.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>
         </div>
         <div class="msec">
-          <div class="msec-title">Safety Tips</div>
+          <div class="msec-title">안전 팁</div>
           <ul style="list-style:none;padding:0">${c.safetyTips.map(t => `<li style="padding:0.25rem 0 0.25rem 1.3rem;position:relative;font-size:0.88rem;color:var(--muted)"><span style="position:absolute;left:0;color:var(--gold);font-weight:700">✓</span>${t}</li>`).join('')}</ul>
         </div>
         <div class="msec">
-          <div class="msec-title">Best Photo Spots</div>
+          <div class="msec-title">최고의 포토 스팟</div>
           <div class="pill-list">${c.photos.map(p => `<span class="pill">📸 ${p}</span>`).join('')}</div>
         </div>
       </div>
@@ -974,7 +974,7 @@ document.getElementById('enquiryForm').addEventListener('submit', async function
   // Disable submit button while sending
   const submitBtn = this.querySelector('button[type="submit"]');
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
+  submitBtn.textContent = '전송 중...';
 
   const payload = {
     Name:                document.getElementById('fname').value,
@@ -1006,7 +1006,7 @@ document.getElementById('enquiryForm').addEventListener('submit', async function
   } catch {
     document.getElementById('formError').style.display = 'block';
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Submit Enquiry';
+    submitBtn.textContent = '문의 제출';
   }
 });
 
@@ -1031,7 +1031,7 @@ function calcBudget() {
   const box = document.getElementById('bc-result');
   box.style.display = 'block';
   document.getElementById('bc-value').textContent = 'SGD ' + total.toLocaleString('en-SG', { minimumFractionDigits:0, maximumFractionDigits:0 });
-  document.getElementById('bc-breakdown').textContent = `${pax} traveller${pax>1?'s':''} × ${days} day${days>1?'s':''} × SGD ${daily}/day`;
+  document.getElementById('bc-breakdown').textContent = `${pax}명 × ${days}일 × SGD ${daily}/일`;
 }
 
 // Packing Checklist
@@ -1068,19 +1068,19 @@ function renderItinerary() {
   const items = JSON.parse(localStorage.getItem('travelItinerary') || '[]');
   const out = document.getElementById('it-output');
   if (items.length === 0) {
-    out.innerHTML = '<div class="it-empty">No items yet. Add your first activity above.</div>';
+    out.innerHTML = '<div class="it-empty">일정이 없습니다. 위에서 첫 번째 활동을 추가하세요.</div>';
     return;
   }
   const sorted = [...items].sort((a,b) => a.day - b.day || a.time.localeCompare(b.time));
   out.innerHTML = `<table class="it-table">
-    <thead><tr><th>Day</th><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+    <thead><tr><th>일차</th><th>시간</th><th>활동</th><th>메모</th></tr></thead>
     <tbody>${sorted.map(r => `<tr><td>Day ${r.day}</td><td>${r.time||'—'}</td><td>${r.activity}</td><td>${r.notes||'—'}</td></tr>`).join('')}</tbody>
   </table>`;
 }
 function addItinerary() {
   const day = document.getElementById('it-day').value;
   const activity = document.getElementById('it-activity').value.trim();
-  if (!day || !activity) { alert('Please enter at least a day number and activity.'); return; }
+  if (!day || !activity) { alert('최소한 일차와 활동명을 입력해 주십시오.'); return; }
   const items = JSON.parse(localStorage.getItem('travelItinerary') || '[]');
   items.push({ day: parseInt(day), time: document.getElementById('it-time').value, activity, notes: document.getElementById('it-notes').value.trim() });
   localStorage.setItem('travelItinerary', JSON.stringify(items));
@@ -1091,7 +1091,7 @@ function addItinerary() {
   renderItinerary();
 }
 function clearItinerary() {
-  if (confirm('Clear all itinerary items?')) { localStorage.removeItem('travelItinerary'); renderItinerary(); }
+  if (confirm('모든 일정을 삭제하시겠습니까?')) { localStorage.removeItem('travelItinerary'); renderItinerary(); }
 }
 
 // ═══════════════════ WEATHER ═══════════════════
@@ -1110,15 +1110,15 @@ function checkWeather() {
     .then(data => {
       const cod = parseInt(data.cod);
       if (cod === 401) {
-        showWeatherError('⏳ API key not activated yet — new keys take up to 2 hours. Please try again shortly.');
+        showWeatherError('⏳ API 키가 아직 활성화되지 않았습니다 — 새 키는 최대 2시간이 소요됩니다. 잠시 후 다시 시도해 주십시오.');
         return;
       }
       if (cod === 404) {
-        showWeatherError('City not found. Try a different spelling (e.g. "Bangkok" not "Bankok").');
+        showWeatherError('도시를 찾을 수 없습니다. 철자를 다시 확인해 주십시오 (예: "Bangkok").');
         return;
       }
       if (cod !== 200) {
-        showWeatherError('Weather unavailable: ' + (data.message || 'Unknown error'));
+        showWeatherError('날씨 정보를 불러올 수 없습니다: ' + (data.message || '알 수 없는 오류'));
         return;
       }
       document.getElementById('wc-city').textContent = data.name + ', ' + data.sys.country;
@@ -1130,7 +1130,7 @@ function checkWeather() {
       document.getElementById('wc-error').style.display = 'none';
       document.getElementById('weatherCard').classList.add('show');
     })
-    .catch(() => showWeatherError('Network error — check your internet connection and try again.'));
+    .catch(() => showWeatherError('네트워크 오류 — 인터넷 연결을 확인하고 다시 시도해 주십시오.'));
 }
 
 function showWeatherError(msg) {
@@ -1187,7 +1187,7 @@ function renderSafety() {
             <div class="acc-city">${c.name}</div>
             <div class="acc-country">${c.country}</div>
           </div>
-          <span class="risk risk-${c.risk === 'low' ? 'low' : c.risk === 'high' ? 'high' : 'med'}">${c.risk === 'low' ? 'Low Risk' : c.risk === 'high' ? 'High Risk' : 'Medium Risk'}</span>
+          <span class="risk risk-${c.risk === 'low' ? 'low' : c.risk === 'high' ? 'high' : 'med'}">${c.risk === 'low' ? '저위험' : c.risk === 'high' ? '고위험' : '중간 위험'}</span>
         </div>
         <span class="acc-arrow">▼</span>
       </div>
@@ -1195,10 +1195,10 @@ function renderSafety() {
         <div class="safety-tips">
           <ul>${c.safetyTips.map(t => `<li>${t}</li>`).join('')}</ul>
         </div>
-        <div><strong style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-family:'Zen Kaku Gothic New',sans-serif">⚠ Common Scams</strong><p style="font-size:0.87rem;color:var(--muted);margin-top:0.3rem">${c.scams}</p></div>
+        <div><strong style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-family:'Zen Kaku Gothic New',sans-serif">⚠ 주의해야 할 사기</strong><p style="font-size:0.87rem;color:var(--muted);margin-top:0.3rem">${c.scams}</p></div>
         <div class="safety-grid" style="margin-top:1rem">
-          <div class="safety-box"><strong>Emergency Numbers</strong><span>${c.emergency}</span></div>
-          <div class="safety-box"><strong>Recommended Hospital</strong><span>${c.hospital}</span></div>
+          <div class="safety-box"><strong>긴급 연락처</strong><span>${c.emergency}</span></div>
+          <div class="safety-box"><strong>추천 병원</strong><span>${c.hospital}</span></div>
         </div>
       </div>
     </div>
