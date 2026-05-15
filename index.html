@@ -281,7 +281,14 @@
     <h2 class="section-title">Plan Your Next Adventure</h2>
     <p class="section-sub">Tell us where you'd like to go and we'll send curated recommendations straight to your inbox.</p>
     <div class="form-card">
-      <div class="success-msg" id="successMsg">✓ Your enquiry has been received! We'll be in touch within 24 hours.</div>
+      <div class="success-msg" id="successMsg">
+        <div style="font-size:2rem;margin-bottom:0.5rem">✅</div>
+        <strong style="font-size:1.1rem">Enquiry Received!</strong><br>
+        Thank you — we'll be in touch within 24 hours.
+      </div>
+      <div id="formError" style="display:none;background:#fff5f5;border:1px solid #fc8181;border-radius:6px;padding:1rem 1.4rem;margin-bottom:1.2rem;color:#c53030;font-size:0.9rem">
+        ⚠ Something went wrong sending your enquiry. Please try again or email us directly.
+      </div>
       <form id="enquiryForm" novalidate>
         <div class="enquiry-grid">
           <div class="fg" id="fg-name">
@@ -335,7 +342,7 @@
             <span class="errmsg"></span>
           </div>
           <div class="fg full">
-            <button type="submit" class="btn btn-gold" style="width:fit-content">Submit Enquiry</button>
+            <button type="submit" class="btn btn-gold" style="width:fit-content;min-width:180px">Submit Enquiry</button>
           </div>
         </div>
       </form>
@@ -902,8 +909,11 @@ function closeModal(e) {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); } });
 
 // ═══════════════════ ENQUIRY FORM ═══════════════════
-document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
   e.preventDefault();
+  document.getElementById('formError').style.display = 'none';
+
+  // Validate required fields
   let valid = true;
   const fields = [
     { id:'fg-name', input:'fname', check: v => v.trim().length > 1 },
@@ -919,22 +929,44 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     else fg.classList.remove('err');
   });
   if (!valid) return;
-  const data = {
-    name: document.getElementById('fname').value,
-    email: document.getElementById('femail').value,
-    phone: document.getElementById('fphone').value,
-    destination: document.getElementById('fdest').value,
-    date: document.getElementById('fdate').value,
-    pax: document.getElementById('fpax').value,
-    message: document.getElementById('fmsg').value,
-    submitted: new Date().toISOString()
+
+  // Disable submit button while sending
+  const submitBtn = this.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  const payload = {
+    Name:                document.getElementById('fname').value,
+    Email:               document.getElementById('femail').value,
+    Phone:               document.getElementById('fphone').value,
+    Destination:         document.getElementById('fdest').value,
+    'Travel Date':       document.getElementById('fdate').value,
+    Travellers:          document.getElementById('fpax').value,
+    Message:             document.getElementById('fmsg').value || '—',
+    _subject:            'New Travel Enquiry — Travel Explorer',
+    _template:           'table',
+    _captcha:            'false'
   };
-  const existing = JSON.parse(localStorage.getItem('travelEnquiries') || '[]');
-  existing.push(data);
-  localStorage.setItem('travelEnquiries', JSON.stringify(existing));
-  document.getElementById('successMsg').style.display = 'block';
-  this.reset();
-  document.getElementById('successMsg').scrollIntoView({ behavior:'smooth', block:'nearest' });
+
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/patrickng@chencptl.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (res.ok && data.success === 'true') {
+      document.getElementById('enquiryForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('successMsg').scrollIntoView({ behavior:'smooth', block:'nearest' });
+    } else {
+      throw new Error('FormSubmit returned failure');
+    }
+  } catch {
+    document.getElementById('formError').style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Enquiry';
+  }
 });
 
 // ═══════════════════ TOOLS ═══════════════════
