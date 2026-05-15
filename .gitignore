@@ -1,0 +1,14 @@
+# Secrets — never push these
+.env
+*.env
+.env.local
+*.pem
+*.key
+secrets/
+
+# MCP config may contain API keys — keep local only
+.mcp.json
+
+# OS
+.DS_Store
+Thumbs.db
