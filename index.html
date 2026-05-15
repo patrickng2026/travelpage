@@ -284,7 +284,7 @@
     <li><a href="#enquiry-form-section">Enquiry</a></li>
   </ul>
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn">🌐 EN ▾</button>
+    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn" aria-haspopup="true" aria-expanded="false">🌐 EN ▾</button>
     <div class="lang-menu" id="langMenu">
       <a href="index.html">🇸🇬 English</a>
       <a href="index.zh.html">🇨🇳 中文 (简体)</a>
@@ -1211,11 +1211,15 @@ function toggleAcc(id) {
 
 // ═══════════════════ LANGUAGE SWITCHER ═══════════════════
 function toggleLangMenu() {
-  document.getElementById('langMenu').classList.toggle('open');
+  const menu = document.getElementById('langMenu');
+  const btn = document.getElementById('langBtn');
+  const isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
 }
 document.addEventListener('click', e => {
   if (!e.target.closest('.lang-switcher')) {
     document.getElementById('langMenu').classList.remove('open');
+    document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -1238,11 +1242,9 @@ if (localStorage.getItem('owApiKey')) document.getElementById('weatherNotice').s
 
 // ═══════════════════ SCROLL REVEAL ═══════════════════
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      revealObserver.unobserve(entry.target);
-    }
+  entries.filter(e => e.isIntersecting).forEach((entry, i) => {
+    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    revealObserver.unobserve(entry.target);
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal, .city-card, .cur-item, .acc-item, .tool-card').forEach(el => {

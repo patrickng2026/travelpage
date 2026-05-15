@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>旅行探索者 — 我们先去，让您知道该去哪里。</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --sakura:      #f2a7bb;
@@ -26,8 +26,8 @@
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Zen Kaku Gothic New', sans-serif; color: var(--ink); background: var(--washi); line-height: 1.7; }
-    h1, h2, h3, h4 { font-family: 'Noto Serif JP', serif; }
+    body { font-family: 'Noto Sans SC', sans-serif; color: var(--ink); background: var(--washi); line-height: 1.7; }
+    h1, h2, h3, h4 { font-family: 'Noto Serif SC', serif; }
     a { text-decoration: none; }
     img { display: block; max-width: 100%; }
 
@@ -44,7 +44,7 @@
       border-bottom: 1px solid rgba(242,167,187,0.25);
       transition: background var(--ease);
     }
-    .nav-brand { color: var(--ink); font-family: 'Noto Serif JP', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; }
+    .nav-brand { color: var(--ink); font-family: 'Noto Serif SC', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; }
     .nav-brand span { color: var(--sakura-dark); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { color: var(--stone); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; transition: color var(--ease); }
@@ -58,14 +58,14 @@
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(242,167,187,0.35) 0%, rgba(28,25,23,0.55) 100%); }
     .hero-grain { position: absolute; inset: 0; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size: 200px; }
     .hero-content { position: relative; text-align: center; color: var(--white); max-width: 820px; padding: 0 2rem; }
-    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--sakura); font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; margin-bottom: 1.5rem; }
+    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--sakura); font-family: 'Noto Sans SC', sans-serif; font-weight: 500; margin-bottom: 1.5rem; }
     .hero-title { font-size: clamp(2.6rem, 6vw, 5.2rem); font-weight: 700; line-height: 1.12; margin-bottom: 1.8rem; letter-spacing: -0.01em; text-shadow: 0 2px 20px rgba(0,0,0,0.2); }
     .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.82); max-width: 540px; margin: 0 auto 3rem; font-weight: 300; letter-spacing: 0.02em; }
     .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .hero-sakura { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); color: rgba(242,167,187,0.6); font-size: 1.1rem; letter-spacing: 1.2rem; }
 
     /* ── BUTTONS ── */
-    .btn { display: inline-block; padding: 0.85rem 2.2rem; border-radius: 0; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; border: none; transition: background var(--ease), color var(--ease), transform var(--ease); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .btn { display: inline-block; padding: 0.85rem 2.2rem; border-radius: 0; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; border: none; transition: background var(--ease), color var(--ease), transform var(--ease); font-family: 'Noto Sans SC', sans-serif; }
     .btn:hover { transform: translateY(-1px); }
     .btn-gold { background: var(--sakura); color: var(--ink); }
     .btn-gold:hover { background: var(--sakura-dark); color: var(--white); }
@@ -79,7 +79,7 @@
     .section { padding: 6rem 2rem; }
     .section-alt { background: var(--mist); }
     .inner { max-width: 1200px; margin: 0 auto; }
-    .section-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sakura-dark); font-weight: 600; margin-bottom: 0.75rem; font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .section-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sakura-dark); font-weight: 600; margin-bottom: 0.75rem; font-family: 'Noto Sans SC', sans-serif; }
     .section-divider { display: block; text-align: center; color: rgba(201,122,150,0.4); letter-spacing: 1rem; font-size: 0.85rem; margin: 0 0 2rem; }
     .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--ink); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
     .section-sub { color: var(--stone); font-size: 0.96rem; max-width: 540px; margin-bottom: 3.5rem; font-weight: 300; line-height: 1.8; }
@@ -90,10 +90,10 @@
     .enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
     .fg { display: flex; flex-direction: column; gap: 0.35rem; }
     .fg.full { grid-column: 1 / -1; }
-    .fg label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .fg label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); font-family: 'Noto Sans SC', sans-serif; }
     .fg input, .fg select, .fg textarea {
       padding: 0.78rem 1rem; border: 1px solid rgba(28,25,23,0.15); border-radius: 0;
-      font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 0.92rem; color: var(--ink);
+      font-family: 'Noto Sans SC', sans-serif; font-size: 0.92rem; color: var(--ink);
       background: var(--washi); transition: border-color var(--ease); outline: none;
     }
     .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--sakura-dark); background: var(--white); }
@@ -111,7 +111,7 @@
     .card-body { padding: 1.4rem; border-left: 3px solid transparent; transition: border-color var(--ease); }
     .city-card:hover .card-body { border-left-color: var(--sakura); }
     .card-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
-    .badge { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.18rem 0.55rem; border-radius: 0; font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .badge { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.18rem 0.55rem; border-radius: 0; font-family: 'Noto Sans SC', sans-serif; }
     .b-country { background: #fce8ef; color: var(--sakura-dark); }
     .b-budget { background: #fdf6e8; color: #8a6828; }
     .b-season { background: #eef5f0; color: #4a7a5a; }
@@ -119,7 +119,7 @@
     .card-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--ink); letter-spacing: 0.01em; }
     .card-desc { color: var(--stone); font-size: 0.86rem; line-height: 1.65; margin-bottom: 1.1rem; font-weight: 300; }
     .card-meta { display: flex; gap: 1rem; font-size: 0.76rem; color: var(--stone); margin-bottom: 1.1rem; flex-wrap: wrap; }
-    .card-btn { width: 100%; padding: 0.72rem; background: var(--ink); color: var(--white); border: none; border-radius: 0; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background var(--ease); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .card-btn { width: 100%; padding: 0.72rem; background: var(--ink); color: var(--white); border: none; border-radius: 0; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background var(--ease); font-family: 'Noto Sans SC', sans-serif; }
     .card-btn:hover { background: var(--sakura-dark); }
 
     /* ── MODALS ── */
@@ -135,10 +135,10 @@
     .modal-close:hover { background: rgba(28,25,23,0.85); }
     .modal-body { padding: 2rem; }
     .msec { margin-bottom: 1.8rem; }
-    .msec-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sakura-dark); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(242,167,187,0.3); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .msec-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sakura-dark); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(242,167,187,0.3); font-family: 'Noto Sans SC', sans-serif; }
     .msec p { color: var(--stone); font-size: 0.92rem; line-height: 1.8; font-weight: 300; }
     .day-block { background: var(--mist); border-left: 2px solid var(--sakura); padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
-    .day-block h4 { color: var(--ink); font-size: 0.88rem; margin-bottom: 0.4rem; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .day-block h4 { color: var(--ink); font-size: 0.88rem; margin-bottom: 0.4rem; font-family: 'Noto Sans SC', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
     .day-block ul { list-style: none; }
     .day-block li { padding: 0.22rem 0 0.22rem 1.2rem; position: relative; font-size: 0.86rem; color: var(--stone); font-weight: 300; }
     .day-block li::before { content: '❀'; position: absolute; left: 0; color: var(--sakura); font-size: 0.65rem; top: 0.38rem; }
@@ -150,7 +150,7 @@
 
     /* ── TOOLS ── */
     .tabs { display: flex; border-bottom: 1px solid rgba(242,167,187,0.3); margin-bottom: 2rem; flex-wrap: wrap; }
-    .tab-btn { padding: 0.85rem 1.4rem; background: none; border: none; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color var(--ease), border-color var(--ease); }
+    .tab-btn { padding: 0.85rem 1.4rem; background: none; border: none; font-family: 'Noto Sans SC', sans-serif; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color var(--ease), border-color var(--ease); }
     .tab-btn.active { color: var(--ink); border-bottom-color: var(--sakura-dark); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -158,27 +158,27 @@
     .tf { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.4rem; }
     .tf .full { grid-column: 1 / -1; }
     .result-box { background: var(--ink); color: var(--white); padding: 1.8rem; text-align: center; margin-top: 0.5rem; }
-    .result-box .rl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; font-family: 'Zen Kaku Gothic New', sans-serif; }
-    .result-box .rv { font-family: 'Noto Serif JP', serif; font-size: 2.6rem; font-weight: 600; color: var(--sakura); }
+    .result-box .rl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; font-family: 'Noto Sans SC', sans-serif; }
+    .result-box .rv { font-family: 'Noto Serif SC', serif; font-size: 2.6rem; font-weight: 600; color: var(--sakura); }
     .checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .cl-cat h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink); margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--sakura); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .cl-cat h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink); margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--sakura); font-family: 'Noto Sans SC', sans-serif; }
     .cl-item { display: flex; align-items: center; gap: 0.55rem; padding: 0.35rem 0; font-size: 0.87rem; color: var(--stone); cursor: pointer; font-weight: 300; }
     .cl-item input[type=checkbox] { width: 14px; height: 14px; accent-color: var(--sakura-dark); cursor: pointer; }
     .cl-item.checked { text-decoration: line-through; opacity: 0.4; }
     .it-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.87rem; }
-    .it-table th { background: var(--ink); color: var(--white); padding: 0.65rem 0.9rem; text-align: left; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; }
+    .it-table th { background: var(--ink); color: var(--white); padding: 0.65rem 0.9rem; text-align: left; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em; font-family: 'Noto Sans SC', sans-serif; font-weight: 500; }
     .it-table td { padding: 0.65rem 0.9rem; border-bottom: 1px solid rgba(242,167,187,0.15); color: var(--stone); font-weight: 300; }
     .it-table tr:hover td { background: var(--mist); }
     .it-empty { text-align: center; padding: 2rem; color: var(--stone); font-size: 0.88rem; }
 
     /* ── WEATHER ── */
     .weather-row { display: flex; gap: 1rem; max-width: 480px; margin-bottom: 2rem; }
-    .weather-row input { flex: 1; padding: 0.85rem 1.1rem; border: 1px solid rgba(28,25,23,0.15); border-radius: 0; font-size: 0.94rem; font-family: 'Zen Kaku Gothic New', sans-serif; transition: border-color var(--ease); background: var(--white); outline: none; color: var(--ink); }
+    .weather-row input { flex: 1; padding: 0.85rem 1.1rem; border: 1px solid rgba(28,25,23,0.15); border-radius: 0; font-size: 0.94rem; font-family: 'Noto Sans SC', sans-serif; transition: border-color var(--ease); background: var(--white); outline: none; color: var(--ink); }
     .weather-row input:focus { border-color: var(--sakura-dark); }
     .weather-card { background: linear-gradient(135deg, #2a1f22, #3d2535); color: var(--white); padding: 2.5rem; max-width: 480px; display: none; border-left: 3px solid var(--sakura); }
     .weather-card.show { display: block; animation: fadeUp 0.3s ease; }
-    .wc-city { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.3rem; font-family: 'Noto Serif JP', serif; }
-    .wc-temp { font-family: 'Noto Serif JP', serif; font-size: 3.8rem; color: var(--sakura); line-height: 1; margin: 0.8rem 0; }
+    .wc-city { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.3rem; font-family: 'Noto Serif SC', serif; }
+    .wc-temp { font-family: 'Noto Serif SC', serif; font-size: 3.8rem; color: var(--sakura); line-height: 1; margin: 0.8rem 0; }
     .wc-cond { font-size: 0.96rem; opacity: 0.8; margin-bottom: 1.4rem; font-weight: 300; letter-spacing: 0.06em; }
     .wc-details { display: flex; gap: 1.8rem; font-size: 0.84rem; opacity: 0.65; flex-wrap: wrap; }
     .api-notice { background: #fdf0f4; border: 1px solid rgba(242,167,187,0.5); padding: 1.2rem 1.5rem; max-width: 480px; font-size: 0.88rem; color: var(--ink); }
@@ -186,7 +186,7 @@
 
     /* ── CURRENCY ── */
     .cur-input-row { display: flex; align-items: center; gap: 0.75rem; max-width: 360px; margin-bottom: 2rem; }
-    .cur-input-row input { flex: 1; padding: 0.85rem 1.1rem; border: 1px solid rgba(28,25,23,0.15); border-radius: 0; font-size: 1.05rem; font-weight: 500; font-family: 'Zen Kaku Gothic New', sans-serif; transition: border-color var(--ease); background: var(--white); outline: none; color: var(--ink); }
+    .cur-input-row input { flex: 1; padding: 0.85rem 1.1rem; border: 1px solid rgba(28,25,23,0.15); border-radius: 0; font-size: 1.05rem; font-weight: 500; font-family: 'Noto Sans SC', sans-serif; transition: border-color var(--ease); background: var(--white); outline: none; color: var(--ink); }
     .cur-input-row input:focus { border-color: var(--sakura-dark); }
     .cur-base-label { background: var(--ink); color: var(--white); padding: 0.85rem 1rem; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.08em; }
     .cur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
@@ -196,7 +196,7 @@
     .cur-flag { font-size: 1.3rem; }
     .cur-name { font-weight: 500; color: var(--ink); font-size: 0.88rem; }
     .cur-code { font-size: 0.68rem; color: var(--stone); letter-spacing: 0.08em; }
-    .cur-amount { font-size: 1.1rem; font-weight: 700; color: var(--sakura-dark); font-family: 'Noto Serif JP', serif; }
+    .cur-amount { font-size: 1.1rem; font-weight: 700; color: var(--sakura-dark); font-family: 'Noto Serif SC', serif; }
     .cur-disclaimer { margin-top: 1rem; font-size: 0.74rem; color: var(--stone); font-style: italic; font-weight: 300; }
 
     /* ── SAFETY ── */
@@ -204,7 +204,7 @@
     .acc-hdr { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.4rem; cursor: pointer; background: var(--white); transition: background var(--ease); }
     .acc-hdr:hover { background: var(--mist); }
     .acc-hdr-left { display: flex; align-items: center; gap: 1rem; }
-    .acc-city { font-weight: 600; color: var(--ink); font-size: 0.94rem; font-family: 'Noto Serif JP', serif; }
+    .acc-city { font-weight: 600; color: var(--ink); font-size: 0.94rem; font-family: 'Noto Serif SC', serif; }
     .acc-country { color: var(--stone); font-size: 0.8rem; font-weight: 300; }
     .risk { padding: 0.18rem 0.6rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 0; }
     .risk-low { background: #eef5f0; color: #3d7a52; }
@@ -219,17 +219,17 @@
     .safety-tips li::before { content: '❀'; position: absolute; left: 0; color: var(--sakura-dark); font-size: 0.65rem; top: 0.45rem; }
     .safety-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem; }
     .safety-box { background: var(--white); padding: 0.85rem 1rem; border-left: 2px solid rgba(242,167,187,0.4); }
-    .safety-box strong { display: block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone); margin-bottom: 0.25rem; font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .safety-box strong { display: block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone); margin-bottom: 0.25rem; font-family: 'Noto Sans SC', sans-serif; }
     .safety-box span { font-size: 0.83rem; color: var(--ink); font-weight: 300; }
 
     /* ── FOOTER ── */
     footer { background: var(--ink); color: var(--white); padding: 4rem 2rem 2rem; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
-    .footer-brand-name { font-family: 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+    .footer-brand-name { font-family: 'Noto Serif SC', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
     .footer-brand-name span { color: var(--sakura); }
     .footer-tagline { color: rgba(255,255,255,0.45); font-size: 0.86rem; font-style: italic; margin-bottom: 1rem; font-weight: 300; }
     .footer-disc { font-size: 0.74rem; color: rgba(255,255,255,0.28); line-height: 1.7; font-weight: 300; }
-    .footer-col h4 { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sakura); margin-bottom: 1rem; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 600; }
+    .footer-col h4 { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sakura); margin-bottom: 1rem; font-family: 'Noto Sans SC', sans-serif; font-weight: 600; }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 0.5rem; }
     .footer-col a { color: rgba(255,255,255,0.5); font-size: 0.86rem; transition: color var(--ease); font-weight: 300; }
@@ -238,11 +238,11 @@
 
     /* ── LANGUAGE SWITCHER ── */
     .lang-switcher { position: relative; }
-    .lang-btn { background: none; border: 1px solid rgba(242,167,187,0.4); color: var(--stone); padding: 0.35rem 0.75rem; border-radius: 0; font-size: 0.72rem; font-family: 'Zen Kaku Gothic New', sans-serif; cursor: pointer; letter-spacing: 0.06em; transition: border-color var(--ease), color var(--ease); white-space: nowrap; }
+    .lang-btn { background: none; border: 1px solid rgba(242,167,187,0.4); color: var(--stone); padding: 0.35rem 0.75rem; border-radius: 0; font-size: 0.72rem; font-family: 'Noto Sans SC', sans-serif; cursor: pointer; letter-spacing: 0.06em; transition: border-color var(--ease), color var(--ease); white-space: nowrap; }
     .lang-btn:hover { border-color: var(--sakura-dark); color: var(--sakura-dark); }
     .lang-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; background: var(--washi); border: 1px solid rgba(242,167,187,0.25); min-width: 180px; box-shadow: var(--shadow-lg); z-index: 999; }
     .lang-menu.open { display: block; animation: fadeUp 0.2s ease; }
-    .lang-menu a { display: block; padding: 0.6rem 1rem; font-size: 0.82rem; color: var(--stone); transition: background var(--ease), color var(--ease); font-family: 'Zen Kaku Gothic New', sans-serif; }
+    .lang-menu a { display: block; padding: 0.6rem 1rem; font-size: 0.82rem; color: var(--stone); transition: background var(--ease), color var(--ease); font-family: 'Noto Sans SC', sans-serif; }
     .lang-menu a:hover { background: var(--mist); color: var(--sakura-dark); }
     @media (max-width: 768px) { .lang-switcher { order: -1; } .lang-menu { right: auto; left: 0; } }
 
@@ -284,7 +284,7 @@
     <li><a href="#enquiry-form-section">咨询</a></li>
   </ul>
   <div class="lang-switcher">
-    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn">🌐 ZH ▾</button>
+    <button class="lang-btn" onclick="toggleLangMenu()" id="langBtn" aria-haspopup="true" aria-expanded="false">🌐 ZH ▾</button>
     <div class="lang-menu" id="langMenu">
       <a href="index.html">🇸🇬 English</a>
       <a href="index.zh.html">🇨🇳 中文 (简体)</a>
@@ -467,7 +467,7 @@
       <div class="tool-card">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
           <p style="color:var(--muted);font-size:0.88rem">勾选已收拾的物品 — 进度将自动保存。</p>
-          <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.5rem 1rem;border-radius:4px" onclick="resetChecklist()">全部重置</button>
+          <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.5rem 1rem;border-radius:4px" onclick="resetChecklist()">全部重置</button>
         </div>
         <div class="checklist-grid" id="checklistGrid"></div>
       </div>
@@ -495,7 +495,7 @@
           </div>
           <div class="fg full" style="display:flex;gap:0.75rem;flex-wrap:wrap">
             <button class="btn btn-navy btn-sm" onclick="addItinerary()">添加至行程</button>
-            <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.6rem 1.2rem;border-radius:4px" onclick="clearItinerary()">清空全部</button>
+            <button class="btn btn-sm" style="background:#f0f0f0;color:var(--navy);border:none;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.6rem 1.2rem;border-radius:4px" onclick="clearItinerary()">清空全部</button>
           </div>
         </div>
         <div id="it-output"></div>
@@ -518,8 +518,8 @@
       <strong>🔑 请输入您的 OpenWeather API 密钥以启用实时天气</strong>
       在 <strong>openweathermap.org/api</strong> 免费获取密钥，然后粘贴至下方。密钥仅保存在您的浏览器中。
       <div style="display:flex;gap:0.75rem;margin-top:0.75rem;flex-wrap:wrap">
-        <input type="text" id="apiKeyInput" placeholder="在此粘贴您的 API 密钥……" style="flex:1;padding:0.6rem 0.9rem;border:1px solid #f59e0b;border-radius:6px;font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.88rem;min-width:0">
-        <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:'Zen Kaku Gothic New',sans-serif;white-space:nowrap">保存密钥</button>
+        <input type="text" id="apiKeyInput" placeholder="在此粘贴您的 API 密钥……" style="flex:1;padding:0.6rem 0.9rem;border:1px solid #f59e0b;border-radius:6px;font-family:'Noto Sans SC',sans-serif;font-size:0.88rem;min-width:0">
+        <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:'Noto Sans SC',sans-serif;white-space:nowrap">保存密钥</button>
       </div>
     </div>
     <div id="wc-error" style="display:none;background:#fff5f5;border:1px solid #fc8181;border-radius:8px;padding:0.9rem 1.2rem;max-width:480px;font-size:0.88rem;color:#c53030;margin-bottom:1rem"></div>
@@ -1195,7 +1195,7 @@ function renderSafety() {
         <div class="safety-tips">
           <ul>${c.safetyTips.map(t => `<li>${t}</li>`).join('')}</ul>
         </div>
-        <div><strong style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-family:'Zen Kaku Gothic New',sans-serif">⚠ 常见骗局</strong><p style="font-size:0.87rem;color:var(--muted);margin-top:0.3rem">${c.scams}</p></div>
+        <div><strong style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-family:'Noto Sans SC',sans-serif">⚠ 常见骗局</strong><p style="font-size:0.87rem;color:var(--muted);margin-top:0.3rem">${c.scams}</p></div>
         <div class="safety-grid" style="margin-top:1rem">
           <div class="safety-box"><strong>紧急联系电话</strong><span>${c.emergency}</span></div>
           <div class="safety-box"><strong>推荐医院</strong><span>${c.hospital}</span></div>
@@ -1211,11 +1211,15 @@ function toggleAcc(id) {
 
 // ═══════════════════ LANGUAGE SWITCHER ═══════════════════
 function toggleLangMenu() {
-  document.getElementById('langMenu').classList.toggle('open');
+  const menu = document.getElementById('langMenu');
+  const btn = document.getElementById('langBtn');
+  const isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
 }
 document.addEventListener('click', e => {
   if (!e.target.closest('.lang-switcher')) {
     document.getElementById('langMenu').classList.remove('open');
+    document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -1238,11 +1242,9 @@ if (localStorage.getItem('owApiKey')) document.getElementById('weatherNotice').s
 
 // ═══════════════════ SCROLL REVEAL ═══════════════════
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      revealObserver.unobserve(entry.target);
-    }
+  entries.filter(e => e.isIntersecting).forEach((entry, i) => {
+    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    revealObserver.unobserve(entry.target);
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal, .city-card, .cur-item, .acc-item, .tool-card').forEach(el => {
