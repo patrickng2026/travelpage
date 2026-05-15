@@ -474,6 +474,7 @@
         <button onclick="saveApiKey()" style="background:#f59e0b;color:#78350f;border:none;padding:0.6rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;white-space:nowrap">Save Key</button>
       </div>
     </div>
+    <div id="wc-error" style="display:none;background:#fff5f5;border:1px solid #fc8181;border-radius:8px;padding:0.9rem 1.2rem;max-width:480px;font-size:0.88rem;color:#c53030;margin-bottom:1rem"></div>
     <div class="weather-card" id="weatherCard">
       <div class="wc-city" id="wc-city"></div>
       <div class="wc-temp" id="wc-temp"></div>
@@ -1034,16 +1035,36 @@ function checkWeather() {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${key}&units=metric`)
     .then(r => r.json())
     .then(data => {
-      if (data.cod !== 200) { alert('City not found. Try a different spelling.'); return; }
+      const cod = parseInt(data.cod);
+      if (cod === 401) {
+        showWeatherError('⏳ API key not activated yet — new keys take up to 2 hours. Please try again shortly.');
+        return;
+      }
+      if (cod === 404) {
+        showWeatherError('City not found. Try a different spelling (e.g. "Bangkok" not "Bankok").');
+        return;
+      }
+      if (cod !== 200) {
+        showWeatherError('Weather unavailable: ' + (data.message || 'Unknown error'));
+        return;
+      }
       document.getElementById('wc-city').textContent = data.name + ', ' + data.sys.country;
       document.getElementById('wc-temp').textContent = Math.round(data.main.temp) + '°C';
       document.getElementById('wc-cond').textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
       document.getElementById('wc-hum').textContent = data.main.humidity + '%';
       document.getElementById('wc-wind').textContent = Math.round(data.wind.speed * 3.6) + ' km/h';
       document.getElementById('wc-vis').textContent = (data.visibility / 1000).toFixed(1) + ' km';
+      document.getElementById('wc-error').style.display = 'none';
       document.getElementById('weatherCard').classList.add('show');
     })
-    .catch(() => alert('Could not fetch weather. Check your API key and connection.'));
+    .catch(() => showWeatherError('Network error — check your internet connection and try again.'));
+}
+
+function showWeatherError(msg) {
+  const el = document.getElementById('wc-error');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('weatherCard').classList.remove('show');
 }
 
 function saveApiKey() {
